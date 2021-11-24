@@ -1,1 +1,119 @@
+/* = КО ВСЕМУ ДОКУМЕНТУ ==================================== */
+html, body {
+    height:100%;
+}
+
+.wrapper {
+
+    display: grid;
+    min-height: 100vh;
+    grid-template: minmax(112px, auto) 1fr minmax(76px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+/* = HEADER ================================================ */
+.header {
+	grid-area: header;
+    position: fixed;
+    width: 100%;
+    top: 0;
+	padding: 16px 16px 0px 16px;
+	background-color: blueviolet;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
+    align-items: center;
+}
+
+/* = MAIN =================================================== */
+.main {
+    grid-area: main;
+    width: 100%;
+	background-color: yellowgreen;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". intro ."
+        ". barf ."
+        ". diet-compo ."
+        ". diets ."
+        ". diet-calc ."
+        ". why-zooov ."
+        ". about-zooov ."
+        ". delivery ."
+        ". faq ."
+        ". contacts .";
+}
+
+/* = INTRODUCTION ============================================ */
+.intro {
+    grid-area: intro;
+    background-color:aqua;
+}
+
+/* = WHAT IS BARF ============================================ */
+.barf {
+    grid-area: barf;
+    background-color:blueviolet;
+}
+
+/* = DIET COMPOSITION ========================================= */
+.diet-compo {
+    grid-area: diet-compo;
+    background-color:brown;
+}
+
+/* = ZOOOV DIETS ============================================== */
+.diets {
+    grid-area: diets;
+    background-color:burlywood;
+}
+
+/* = DIET CALCULATION ========================================= */
+.diet-calc {
+    grid-area: diet-calc;
+    background-color:cadetblue;
+}
+
+/* = WHY ZOOOV ================================================ */
+.why-zooov {
+    grid-area: why-zooov;
+    background-color:chocolate;
+}
+
+/* = ABOUT ZOOOV: FROM ZOOOV WITH CARE AND LOVE =============== */
+.about-zooov {
+    grid-area: about-zooov;
+    background-color:cornflowerblue;
+}
+
+/* = DELIVERY: HOW TO GET ZOOOV? ============================== */
+.delivery {
+    grid-area: delivery;
+    background-color:crimson;
+}
+
+/* = FAQ ====================================================== */
+.faq {
+    grid-area: faq;
+    background-color:darkcyan;
+}
+
+/* = CONTACTS ================================================= */
+.contacts {
+    grid-area: contacts;
+    background-color:darkgoldenrod;
+}
+
+/* = FOOTER =================================================== */
+.footer {
+    grid-area: footer;
+    width: 100%;
+	padding: 0px 16px 16px 16px;
+	background-color:darkolivegreen;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
+}
 
