@@ -83,40 +83,6 @@ html, body {
     margin-right: 50px;
 }
 
-/*планшеты 768-1023*/
-@media screen and (max-width: 1024px) {
-    .header__container {
-        margin-top: 8px;
-    }
-
-    .header__menu {
-        margin: 0 0 0 148px;
-    }
-}
-
-/*планшеты вертикально и смартфоны горизонтально 425-767*/
-@media screen and (max-width: 768px) {
-    .header__container {
-        margin-top: 0;
-    }
-
-    .header__menu {
-        margin: 0 0 0 70px;
-    }
-}
-
-/*смартфоны вертикально -424*/
-@media screen and (min-width: 300px) and (max-width: 424px) {
-    .header__container {
-        min-height: 50px;
-        margin-top: 0;
-    }
-
-    .header__menu {
-        margin: 0 0 0 30px;
-    }
-}
-
 /* = MAIN =================================================== */
 .main {
     flex: 1 1 auto;
@@ -191,6 +157,7 @@ html, body {
 }
 
 .intro__zooov-stroke {
+
     position: absolute;
     max-height: 548px;
     right:0;
