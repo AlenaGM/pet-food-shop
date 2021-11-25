@@ -1,0 +1,6 @@
+@media screen and (min-width: 1441px) - мой компьютер
+@media screen and (min-width: 1281px) and (max-width: 1440px) - макет; большой десктоп
+@media screen and (min-width: 1025px) and (max-width: 1280px) - десктоп
+@media screen and (min-width: 769px) and (max-width: 1024px) - планшет горизонтально
+@media screen and (min-width: 376px) and (max-width: 768px) - планшет вертикально, смартфоны горизонтально; menu -> burger
+@media screen and (max-width: 375px) - макет; смартфоны вертикально
