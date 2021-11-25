@@ -1,109 +1,288 @@
 /* = КО ВСЕМУ ДОКУМЕНТУ ==================================== */
 html, body {
     height:100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 130%;
 }
 
 .wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-    display: grid;
-    min-height: 100vh;
-    grid-template: minmax(112px, auto) 1fr minmax(76px, auto) / 1fr;
-	grid-template-areas:
-		"header"
-		"main"
-		"footer";
+._container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px 16px;
+    box-sizing: content-box;
+}
+
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
 
 /* = HEADER ================================================ */
 .header {
-	grid-area: header;
-    position: fixed;
+    position: absolute;
     width: 100%;
+    left: 0;
     top: 0;
-	padding: 16px 16px 0px 16px;
-	background-color: blueviolet;
-	display: grid;
-	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
+    z-index: 50;
+}
+
+.header__container {
+    display:flex;
+    min-height: 80px;
     align-items: center;
+    margin-top: 16px;
+}
+
+.header__logo {
+    flex: 0 0 80px;
+}
+
+.header__logo img {
+    max-width: 100%;
+    display: block;
+
+}
+
+.header__menu {
+    margin: 0 0 0 356px;
+}
+
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.menu__link {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu__list li:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+/*планшеты 768-1023*/
+@media screen and (max-width: 1024px) {
+    .header__container {
+        margin-top: 8px;
+    }
+
+    .header__menu {
+        margin: 0 0 0 148px;
+    }
+}
+
+/*планшеты вертикально и смартфоны горизонтально 425-767*/
+@media screen and (max-width: 768px) {
+    .header__container {
+        margin-top: 0;
+    }
+
+    .header__menu {
+        margin: 0 0 0 70px;
+    }
+}
+
+/*смартфоны вертикально -424*/
+@media screen and (min-width: 300px) and (max-width: 424px) {
+    .header__container {
+        min-height: 50px;
+        margin-top: 0;
+    }
+
+    .header__menu {
+        margin: 0 0 0 30px;
+    }
 }
 
 /* = MAIN =================================================== */
 .main {
-    grid-area: main;
-    width: 100%;
-	background-color: yellowgreen;
-	display: grid;
-	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
-    grid-template-areas:
-        ". intro ."
-        ". barf ."
-        ". diet-compo ."
-        ". diets ."
-        ". diet-calc ."
-        ". why-zooov ."
-        ". about-zooov ."
-        ". delivery ."
-        ". faq ."
-        ". contacts .";
+    flex: 1 1 auto;
 }
 
 /* = INTRODUCTION ============================================ */
 .intro {
-    grid-area: intro;
-    background-color:aqua;
+    position: relative;
+    height: 100vh;
+}
+
+.intro__body {
+    padding: 226px 0px 225px 0px;
+    position: relative;
+    z-index: 2;
+    max-width: 410px;
+}
+
+.intro__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+    margin: 0px 0px 10px 0px;
+}
+
+.intro__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+    max-width: 370px;
+    margin: 0px 0px 25px 0px;
+}
+
+.intro__button {
+    display: inline-flex;
+}
+
+.button {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button_red {
+    color: #FFFFFF;
+    background: #961914;
+}
+
+.intro__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 /* = WHAT IS BARF ============================================ */
 .barf {
     grid-area: barf;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1232px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:blueviolet;
+}
+
+.text {
+    grid-area: text;
+    padding: 0 16px;
+    background-color: gold;
 }
 
 /* = DIET COMPOSITION ========================================= */
 .diet-compo {
     grid-area: diet-compo;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:brown;
 }
 
 /* = ZOOOV DIETS ============================================== */
 .diets {
     grid-area: diets;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:burlywood;
 }
 
 /* = DIET CALCULATION ========================================= */
 .diet-calc {
     grid-area: diet-calc;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:cadetblue;
 }
 
 /* = WHY ZOOOV ================================================ */
 .why-zooov {
     grid-area: why-zooov;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:chocolate;
 }
 
 /* = ABOUT ZOOOV: FROM ZOOOV WITH CARE AND LOVE =============== */
 .about-zooov {
     grid-area: about-zooov;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:cornflowerblue;
 }
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
 .delivery {
     grid-area: delivery;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:crimson;
 }
 
 /* = FAQ ====================================================== */
 .faq {
     grid-area: faq;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:darkcyan;
 }
 
 /* = CONTACTS ================================================= */
 .contacts {
     grid-area: contacts;
+    display:grid;
+    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". text .";
     background-color:darkgoldenrod;
 }
 
