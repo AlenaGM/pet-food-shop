@@ -220,7 +220,6 @@ html, body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color:#E5E5E5;
         margin: 0px;
         display: flex;
         flex-direction: column;
@@ -229,20 +228,8 @@ html, body {
         text-align:center;
         transition: all 0.3s ease 0s;
         overflow: auto;
-    }
-
-    .menu__image_left-wave img {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 156px;
-    }
-
-    .menu__image_right-wave img {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 281px;
+        background: url(../img/intro/mobile-wave-left.png) 0 160px no-repeat, url(../img/intro/mobile-wave-right.png) 100% 340px no-repeat, #FFFFFF;
+        background-attachment: local;
     }
 
     .header__menu.active{
