@@ -125,6 +125,12 @@ html, body {
 }
 
 @media screen and (max-width: 1220px){
+    .header__menu {
+        margin: 0 0 0 256px;
+    }
+}
+
+@media screen and (max-width: 1208px){
     .intro__text {
         font-size: 19px;
     }
