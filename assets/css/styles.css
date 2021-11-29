@@ -97,11 +97,7 @@ html, body {
 }
 
 /*бургер*/
-.header__container {
-    height: 60px;
-    margin-top: 8px;
 
-}
 
 .header::before {
     content: '';
@@ -124,13 +120,8 @@ html, body {
     display: none;
 }
 
-@media screen and (max-width: 1220px){
-    .header__menu {
-        margin: 0 0 0 256px;
-    }
-}
 
-@media screen and (max-width: 1208px){
+@media screen and (max-width: 1280px){
     .intro__text {
         font-size: 19px;
     }
@@ -145,10 +136,15 @@ html, body {
 
     .header__menu {
         margin: 0 0 0 156px;
+        transition: all 0.5s ease 0s;
     }
 }
 
 @media screen and (max-width: 1030px){
+    .header__container {
+        height: 60px;
+    }
+
     body.lock {
         overflow: hidden;
     }
