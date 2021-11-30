@@ -131,7 +131,7 @@ html, body {
     }
 
     ._container {
-        padding: 16px 24px 0px 24px;
+        padding: 16px 19px 0px 19px;
     }
 
     .header__menu {
@@ -261,8 +261,14 @@ html, body {
 
     .header__button {
         display:block;
-        padding-top: 102px;
+        padding-top: 32px;
         padding-bottom: 62px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header__button {
+        padding-top: 102px;
     }
 }
 
@@ -278,7 +284,7 @@ html, body {
 }
 
 .intro__body {
-    padding: 226px 0px 225px 0px;
+    padding: 28.25vh 0px 28.125vh 0px;
     position: relative;
     z-index: 2;
     max-width: 410px;
@@ -293,7 +299,7 @@ html, body {
     letter-spacing: 0.02em;
     text-align: left;
     color: #FFFFFF;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 1.25vh 0px;
 }
 
 .intro__text {
@@ -304,7 +310,8 @@ html, body {
     text-align: left;
     color: #FFFFFF;
     max-width: 370px;
-    margin: 0px 0px 25px 0px;
+    margin: 0px 0px 3.125vh 0px;
+    padding-right: 60px;
 }
 
 .intro__button {
@@ -349,6 +356,55 @@ html, body {
     top: 20%;
     max-height: 548px;
 }
+
+.intro__zooov-stroke img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
+    .intro__zooov-stroke {
+        top: auto;
+        bottom: 7px;}
+
+    .intro__text {
+        font-size: 19px;
+    }
+
+    .intro__title {
+        font-size: 49px;
+    }
+
+    .intro__body {
+        padding: 27.75vh 0px 23.19vh 0px;
+        max-width: 410px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .intro__zooov-stroke {
+        height: 334px;
+    }
+
+
+    .intro__text {
+        font-size: 18px;
+    }
+
+    .intro__title {
+        font-size: 44px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .intro__zooov-stroke {
+        max-height: 334px;
+    }
+}
+
 /* = WHAT IS BARF ============================================ */
 .barf {
     grid-area: barf;
