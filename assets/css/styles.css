@@ -418,20 +418,81 @@ html, body {
 }
 
 /* = WHAT IS BARF ============================================ */
+/* - Позиционирование -------------------------------------- */
 .barf {
     grid-area: barf;
     display:grid;
-    grid-template-columns: 1fr minmax(auto, 1232px) 1fr;
+    grid-template: 1fr / minmax(auto, 584px) minmax(auto, 588px);
     grid-template-areas:
-        ". text .";
-    background-color:blueviolet;
+        "barf__content barf__image";
+    padding-top: 180px;
+    padding-bottom: 80px;
+    justify-content: space-between;
+}
+
+.barf__content {
+    grid-area: barf__content;
+    box-sizing: border-box;
+    padding-right: 10px;
+}
+
+.barf__image {
+    grid-area: barf__image;
+}
+
+.barf__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* - Типографика ------------------------------------------- */
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    color: #000000;
+}
+
+.minisubtitle {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    color: #000000;
 }
 
 .text {
-    grid-area: text;
-    padding: 0 16px;
-    background-color: gold;
+    line-height: 150%;
+    letter-spacing: 0em;
+    color: #434242;
 }
+
+.bulleted-list {
+    padding-left: 0px;
+}
+
+.bulleted-list li {
+    line-height: 140%;
+    padding-bottom: 15px;
+    color: #434242;
+}
+
+.bulleted-list li {
+    list-style: none;
+}
+
+.bulleted-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #961914;
+    display: inline-block;
+    margin: 0px 6px 2px 0px;
+    }
 
 /* = DIET COMPOSITION ========================================= */
 .diet-compo {
