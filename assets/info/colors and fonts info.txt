@@ -1,0 +1,27 @@
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+
+Regular 400 Medium 500 Semibold 600 Bold 700
+
+Colors
+
+dark-red
+#8B1A12
+rose
+#EC7973
+pale rose
+#EAB5B7
+light rose
+#FDEDEE
+
+antracite
+#161920
+dark-grey
+#424242
+light-grey
+#9D9F9E
+very-light-grey
+#EFF0F0

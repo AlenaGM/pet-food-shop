@@ -1,0 +1,12 @@
+1/ .header
+2/ .intro
+3/ .barf
+4/ .diet-compo
+5/ .diets
+6/ .diet-calc
+7/ .why-zooov
+8/ .about-zooov
+9/ .delivery
+10/ .faq
+11/ .contacts
+12/ .footer
