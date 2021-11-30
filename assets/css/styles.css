@@ -1,9 +1,7 @@
 /* = КО ВСЕМУ ДОКУМЕНТУ ==================================== */
+/* - Позиционирование -------------------------------------- */
 html, body {
     height:100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    line-height: 130%;
 }
 
 .wrapper {
@@ -33,7 +31,15 @@ html, body {
     object-fit: cover;
 }
 
+/* - Типографика ------------------------------------------- */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+}
+
 /* = HEADER ================================================ */
+/* - Позиционирование -------------------------------------- */
 .header {
     position: absolute;
     width: 100%;
@@ -42,11 +48,28 @@ html, body {
     z-index: 50;
 }
 
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
 .header__container {
     display:flex;
     min-height: 80px;
     align-items: center;
     padding-top: 16px;
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
@@ -59,6 +82,10 @@ html, body {
     max-width: 100%;
     display: block;
     object-fit: cover;
+}
+
+.header__burger {
+    display: none;
 }
 
 .header__menu {
@@ -78,6 +105,11 @@ html, body {
     z-index: 3;
 }
 
+.menu__list li:not(:last-of-type) {
+    margin-right: 50px;
+}
+
+/* - Типографика ------------------------------------------- */
 .menu__link {
     font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
@@ -88,48 +120,12 @@ html, body {
     text-decoration: none;
 }
 
-.menu__list li:not(:last-of-type) {
-    margin-right: 50px;
-}
-
 .menu__link:hover {
     text-decoration: underline 2px #961914;
 }
 
-/*бургер*/
-
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.header__body {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__burger {
-    display: none;
-}
-
-
+/* - Медиазапросы ------------------------------------------ */
 @media screen and (max-width: 1280px){
-    .intro__text {
-        font-size: 19px;
-    }
-
-    .intro__title {
-        font-size: 49px;
-    }
-
     ._container {
         padding: 16px 19px 0px 19px;
     }
@@ -138,19 +134,27 @@ html, body {
         margin: 0 0 0 156px;
         transition: all 0.5s ease 0s;
     }
+
+    .intro__title {
+        font-size: 49px;
+    }
+
+    .intro__text {
+        font-size: 19px;
+    }
 }
 
 @media screen and (max-width: 1030px){
-    .header__container {
-        height: 60px;
-    }
-
     body.lock {
         overflow: hidden;
     }
 
     .header.active {
         position: fixed;
+    }
+
+    .header__container {
+        height: 60px;
     }
 
     .header__body {
@@ -277,7 +281,8 @@ html, body {
     flex: 1 1 auto;
 }
 
-/* = INTRODUCTION ============================================ */
+/* = INTRODUCTION =========================================== */
+/* - Позиционирование --------------------------------------- */
 .main__intro {
     position: relative;
     min-height: 100vh;
@@ -286,29 +291,15 @@ html, body {
 .intro__body {
     padding: 28.25vh 0px 28.125vh 0px;
     position: relative;
-    z-index: 2;
     max-width: 410px;
+    z-index: 2;
 }
 
 .intro__title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 54px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #FFFFFF;
     margin: 0px 0px 1.25vh 0px;
 }
 
 .intro__text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFF;
     max-width: 370px;
     margin: 0px 0px 3.125vh 0px;
     padding-right: 60px;
@@ -316,30 +307,6 @@ html, body {
 
 .intro__button {
     display: inline-flex;
-}
-
-.button {
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 42px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 140%;
-    letter-spacing: 0em;
-    text-align: center;
-    text-decoration: none;
-}
-
-.button_red {
-    color: #FFFFFF;
-    background: #961914;
-}
-
-.button_red:hover {
-    background: #75110D;
 }
 
 .intro__image {
@@ -365,36 +332,82 @@ html, body {
     object-fit: cover;
 }
 
-@media screen and (max-width: 768px){
+/* - Типографика ------------------------------------------- */
+.intro__title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.intro__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+/* - Оформление: ссылки, кнопки ---------------------------- */
+
+.button {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button_red {
+    color: #FFFFFF;
+    background: #961914;
+}
+
+.button_red:hover {
+    background: #75110D;
+}
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 823px){
+    .intro__title {
+        font-size: 44px;
+    }
 
     .intro__text {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .intro__zooov-stroke {
+        height: 334px;
+        top: auto;
+        bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .intro__body {
+        padding: 27.75vh 0px 23.19vh 0px;
+        max-width: 410px;
     }
 
     .intro__title {
         font-size: 49px;
     }
 
-    .intro__body {
-        padding: 27.75vh 0px 23.19vh 0px;
-        max-width: 410px;
-    }
-}
-
-@media screen and (max-width: 823px){
-    .intro__zooov-stroke {
-        height: 334px;
-        top: auto;
-        bottom: 7px;
-    }
-
-
     .intro__text {
-        font-size: 18px;
-    }
-
-    .intro__title {
-        font-size: 44px;
+        font-size: 19px;
     }
 }
 
