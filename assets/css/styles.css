@@ -366,9 +366,6 @@ html, body {
 }
 
 @media screen and (max-width: 768px){
-    .intro__zooov-stroke {
-        top: auto;
-        bottom: 7px;}
 
     .intro__text {
         font-size: 19px;
@@ -384,9 +381,11 @@ html, body {
     }
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 823px){
     .intro__zooov-stroke {
         height: 334px;
+        top: auto;
+        bottom: 7px;
     }
 
 
@@ -401,7 +400,7 @@ html, body {
 
 @media screen and (max-width: 375px){
     .intro__zooov-stroke {
-        max-height: 334px;
+        height: 334px;
     }
 }
 
