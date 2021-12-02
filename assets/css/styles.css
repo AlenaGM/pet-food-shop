@@ -132,7 +132,7 @@ html, body {
 
     .header__menu {
         margin: 0 0 0 156px;
-        transition: all 0.5s ease 0s;
+        transition: all 1s ease-out;;
     }
 
     .intro__title {
@@ -382,7 +382,7 @@ html, body {
 /* - Медиазапросы ------------------------------------------ */
 @media screen and (max-width: 823px){
     .intro__title {
-        font-size: 44px;
+        font-size: 49px;
     }
 
     .intro__text {
@@ -403,7 +403,7 @@ html, body {
     }
 
     .intro__title {
-        font-size: 49px;
+        font-size: 44px;
     }
 
     .intro__text {
@@ -422,7 +422,7 @@ html, body {
 .barf {
     grid-area: barf;
     display:grid;
-    grid-template: 1fr / minmax(auto, 584px) minmax(auto, 588px);
+    grid-template: 1fr / minmax(auto, 612px) minmax(auto, 588px);
     grid-template-areas:
         "barf__content barf__image";
     padding-top: 180px;
@@ -499,12 +499,122 @@ html, body {
 /* = DIET COMPOSITION ========================================= */
 .diet-compo {
     grid-area: diet-compo;
-    display:grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
-    grid-template-areas:
-        ". text .";
-    background-color:brown;
+    padding-top: 80px;
+    padding-bottom: 203px;
 }
+
+.diet-compo__container {
+    display:grid;
+    background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
+    overflow: auto;
+    padding: 0px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "diet-compo__adult-dogs diet-compo__puppets";
+}
+
+.diet-compo__adult-dogs {
+    grid-area: diet-compo__adult-dogs;
+}
+
+.diet-compo__puppets {
+    grid-area: diet-compo__puppets;
+}
+
+.diet-compo__section {
+    display:grid;
+    padding: 0px 16px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas:
+        "diet-compo__subtitle diet-compo__subtitle"
+        "diet-compo__list_left diet-compo__list_right";
+}
+
+.diet-compo__subtitle {
+    grid-area: diet-compo__subtitle;
+}
+
+.diet-compo__list_left {
+    grid-area: diet-compo__list_left;
+}
+
+.diet-compo__list_right {
+    grid-area: diet-compo__list_right;
+}
+
+.diet-compo__subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 200%;
+    text-transform: uppercase;
+    margin: 32px auto 16px 7.5%;
+    color: #000000;
+}
+
+.diet-compo__list_left,
+.diet-compo__list_right {
+    padding-left: 0;
+}
+
+.diet-compo__list_left {
+    margin-left: 15%;
+}
+
+.diet-compo__list_left li,
+.diet-compo__list_right li {
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+.compo__item_meat::before {
+    content: url('../img/diet-compo/meat.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_bones::before {
+    content: url('../img/diet-compo/bones.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_vegetables::before {
+    content: url('../img/diet-compo/vegetables.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_liver::before {
+    content: url('../img/diet-compo/liver.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_by-products::before {
+    content: url('../img/diet-compo/by-products.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_grains::before {
+    content: url('../img/diet-compo/grains.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
+
+.compo__item_fruits::before {
+    content: url('../img/diet-compo/fruits.svg');
+    width: 20px;
+    display: inline-block;
+    margin: 0px 16px 0px 0px;
+    }
 
 /* = ZOOOV DIETS ============================================== */
 .diets {
