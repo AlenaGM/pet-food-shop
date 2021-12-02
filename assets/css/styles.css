@@ -501,13 +501,13 @@ html, body {
     grid-area: diet-compo;
     padding-top: 80px;
     padding-bottom: 203px;
+    display:grid;
+    grid-template: 1fr / minmax(auto, 1200px);
 }
 
-.diet-compo__container {
+.diet-compo__content {
     display:grid;
     background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
-    overflow: auto;
-    padding: 0px;
     grid-template-columns: repeat(2, 50%);
     grid-template-areas:
         "diet-compo__adult-dogs diet-compo__puppets";
