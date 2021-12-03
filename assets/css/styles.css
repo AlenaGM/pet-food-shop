@@ -715,17 +715,47 @@ html, body {
     justify-self: start;
 }
 
-
-
 /* = DIET CALCULATION ========================================= */
 .diet-calc {
     grid-area: diet-calc;
+    margin-bottom: 180px;
     display:grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
-    grid-template-areas:
-        ". text .";
-    background-color:cadetblue;
+    grid-template: 1fr / minmax(auto, 1200px);
 }
+
+.diet-calc__content {
+    display:grid;
+    background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
+    grid-template-columns: 66% 34%;
+    min-height: 184px;
+    grid-template-areas:
+        "diet-compo__text diet-compo__button";
+}
+
+.diet-compo__text {
+    grid-area: diet-compo__text;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 2.5%;
+    align-self: center;
+}
+
+.diet-compo__text {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #000000;
+}
+
+.diet-compo__button {
+    grid-area: diet-compo__button;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
 
 /* = WHY ZOOOV ================================================ */
 .why-zooov {
