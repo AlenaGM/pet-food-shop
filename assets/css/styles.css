@@ -31,11 +31,109 @@ html, body {
     object-fit: cover;
 }
 
+.intro, .diet-calc, .why-zooov, .about-zooov, .delivery, .faq {
+    margin-bottom: 180px;
+}
+
+.barf, .diets {
+    margin-bottom: 80px;
+}
+
+.diet-compo {
+    margin-bottom: 200px;
+}
+
 /* - Типографика ------------------------------------------- */
 html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+}
+
+.subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     line-height: 130%;
+    color: #000000;
+}
+
+.minisubtitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #000000;
+}
+
+.text {
+    line-height: 140%;
+    letter-spacing: 0em;
+    color: #434242;
+}
+
+._white {
+    color: #FFFFFF;
+}
+
+._black {
+    color: #000000;
+}
+
+/* - Оформление: ссылки, кнопки ---------------------------- */
+.button {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: 0em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button_red {
+    color: #FFFFFF;
+    background: #961914;
+}
+
+.button_red:hover {
+    background: #75110D;
+}
+
+.button_white {
+    color: #961914;
+    background: #FFFFFF;
+    border: solid 1px #961914;
+}
+
+.button_white:hover {
+    background: #EAD1D0;
+    border: none;
+}
+
+.button_pink {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.button_pink:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.button_peach, .button_peach a {
+    background: #FFF4F3;
+    color: #EC7973;
+    text-decoration: none;
+    border: none;
+}
+
+.button_peach:hover, .button_peach:hover a {
+    background: #EAD1D0;
+    color: #961914;
 }
 
 /* = HEADER ================================================ */
@@ -111,7 +209,6 @@ html, body {
 
 /* - Типографика ------------------------------------------- */
 .menu__link {
-    font-family: 'Montserrat', sans-serif;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 500;
@@ -282,7 +379,7 @@ html, body {
 
 /* = INTRODUCTION =========================================== */
 /* - Позиционирование --------------------------------------- */
-.main__intro {
+.intro {
     position: relative;
     min-height: 100vh;
 }
@@ -296,10 +393,6 @@ html, body {
 
 .intro__title {
     margin: 0px 0px 1.25vh 0px;
-}
-
-.intro__title::nth-of-type(4n) {
-    background-color: lime;
 }
 
 .intro__text {
@@ -339,47 +432,16 @@ html, body {
 .intro__title {
     font-family: 'Oswald', sans-serif;
     font-size: 54px;
-    font-style: normal;
     font-weight: 700;
-    line-height: 130%;
     letter-spacing: 0.02em;
-    text-align: left;
+    line-height: 130%;
     color: #FFFFFF;
 }
 
 .intro__text {
-    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     line-height: 140%;
-    letter-spacing: 0em;
-    text-align: left;
     color: #FFFFFF;
-}
-
-/* - Оформление: ссылки, кнопки ---------------------------- */
-
-.button {
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 42px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 140%;
-    letter-spacing: 0em;
-    text-align: center;
-    text-decoration: none;
-}
-
-.button_red {
-    color: #FFFFFF;
-    background: #961914;
-}
-
-.button_red:hover {
-    background: #75110D;
 }
 
 /* - Медиазапросы ------------------------------------------ */
@@ -427,15 +489,13 @@ html, body {
     grid-template: 1fr / minmax(auto, 612px) minmax(auto, 588px);
     grid-template-areas:
         "barf__content barf__image";
-    padding-top: 180px;
-    padding-bottom: 80px;
     justify-content: space-between;
 }
 
 .barf__content {
     grid-area: barf__content;
     box-sizing: border-box;
-    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .barf__image {
@@ -449,29 +509,13 @@ html, body {
 }
 
 /* - Типографика ------------------------------------------- */
-.subtitle {
-    font-family: 'Oswald', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    margin-top: 55px;
-    margin-bottom: 32px;
-    color: #000000;
-}
-
-.minisubtitle {
-    font-size: 18px;
-    font-weight: 600;
-    padding-top: 24px;
+.barf__subtitle {
+    padding-top: 55px;
     padding-bottom: 16px;
-    margin: 0px;
-    color: #000000;
 }
 
-.text {
-    line-height: 150%;
-    letter-spacing: 0em;
-    color: #434242;
+.barf__minisubtitle {
+    padding-top: 8px;
 }
 
 .bulleted-list {
@@ -479,9 +523,7 @@ html, body {
 }
 
 .bulleted-list li {
-    line-height: 140%;
     padding-bottom: 15px;
-    color: #434242;
 }
 
 .bulleted-list li {
@@ -499,9 +541,8 @@ html, body {
     }
 
 /* = DIET COMPOSITION ========================================= */
+/* - Позиционирование -------------------------------------- */
 .diet-compo {
-    padding-top: 80px;
-    padding-bottom: 203px;
     display:grid;
     grid-template: 1fr / minmax(auto, 1200px);
 }
@@ -524,15 +565,15 @@ html, body {
 
 .diet-compo__section {
     display:grid;
-    padding: 0px 16px;
+    margin: 0px 16px;
     grid-template-columns: repeat(2, 50%);
     grid-template-areas:
-        "diet-compo__subtitle diet-compo__subtitle"
+        "diet-compo__minisubtitle diet-compo__minisubtitle"
         "diet-compo__list_left diet-compo__list_right";
 }
 
-.diet-compo__subtitle {
-    grid-area: diet-compo__subtitle;
+.diet-compo__minisubtitle {
+    grid-area: diet-compo__minisubtitle;
 }
 
 .diet-compo__list_left {
@@ -543,29 +584,12 @@ html, body {
     grid-area: diet-compo__list_right;
 }
 
-.diet-compo__subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 200%;
-    text-transform: uppercase;
-    margin: 32px auto 16px 7.5%;
-    color: #000000;
-}
-
-.diet-compo__list_left,
-.diet-compo__list_right {
-    padding-left: 0;
+.diet-compo__minisubtitle {
+    margin: 32px auto 0px 7.5%;
 }
 
 .diet-compo__list_left {
     margin-left: 15%;
-}
-
-.diet-compo__list_left li,
-.diet-compo__list_right li {
-    list-style-type: none;
-    padding-bottom: 30px;
 }
 
 .compo__item_meat::before {
@@ -617,20 +641,41 @@ html, body {
     margin: 0px 16px 0px 0px;
     }
 
+/* - Типографика ------------------------------------------- */
+.diet-compo__minisubtitle {
+    font-size: 14px;
+    line-height: 200%;
+    text-transform: uppercase;
+}
+
+.diet-compo__list_left,
+.diet-compo__list_right {
+    padding-left: 0;
+}
+
+.diet-compo__list_left li,
+.diet-compo__list_right li {
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 250%;
+    color: #434242;
+}
+
 /* = ZOOOV DIETS ============================================== */
+/* - Позиционирование -------------------------------------- */
 .diets {
     display:grid;
     grid-template-columns: minmax(auto, 326px) minmax(auto, 97px) minmax(auto, 777px);
     grid-template-areas:
         "diets__subtitle . diets__text"
         "diets__items diets__items diets__items";
-        padding-bottom: 80px;
 }
+
 .diets__subtitle {
     grid-area: diets__subtitle;
     display: grid;
     align-self: center;
-    margin: 0px;
 }
 
 .diets__text {
@@ -641,15 +686,17 @@ html, body {
     grid-area: diets__items;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-top: 72px;
     column-gap: 26px;
     row-gap: 50px;
+    margin-top: 72px;
 }
+
 .diets__item {
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr minmax(40px,auto) / 1fr;
 }
+
 .diets__image {
     position: relative;
     padding: 0px 0px 90% 0px;
@@ -666,13 +713,15 @@ html, body {
     object-fit: cover;
 }
 
+.diets_button {
+    justify-self: start;
+}
+
+/* - Типографика ------------------------------------------- */
 .diets_destination {
     font-size: 16px;
     font-weight: 700;
-    line-height: 130%;
-    padding-bottom: 6px;
-    margin: 0px;
-    color: #000000;
+    padding-bottom: 4px;
 }
 
 .diets__compo, .diets_weight {
@@ -685,10 +734,7 @@ html, body {
 }
 
 .diets__descrition {
-    font-size: 16px;
-    line-height: 140%;
-    letter-spacing: 0em;
-    color: #434242;
+    font-size: 14px;
     padding-bottom: 11px;
 }
 
@@ -696,24 +742,9 @@ html, body {
     padding-bottom: 24px;
 }
 
-.button_white {
-    color: #961914;
-    background: #ffffff;
-    border: solid 1px #961914;
-}
-
-.button_white:hover {
-    background: #EAD1D0;
-    border: none;
-}
-
-.diets_button {
-    justify-self: start;
-}
-
 /* = DIET CALCULATION ========================================= */
+/* - Позиционирование -------------------------------------- */
 .diet-calc {
-    margin-bottom: 180px;
     display:grid;
     grid-template: 1fr / minmax(auto, 1200px);
 }
@@ -730,18 +761,7 @@ html, body {
 .diet-compo__text {
     grid-area: diet-compo__text;
     display: flex;
-    padding-left: 5%;
-    padding-right: 2.5%;
     align-self: center;
-}
-
-.diet-compo__text {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #000000;
 }
 
 .diet-compo__button {
@@ -751,11 +771,22 @@ html, body {
     align-self: center;
 }
 
+/* - Типографика ------------------------------------------- */
+.diet-compo__text {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #000000;
+    padding-left: 5%;
+    padding-right: 2.5%;
+}
 
 /* = WHY ZOOOV ================================================ */
+/* - Позиционирование -------------------------------------- */
 .why-zooov {
     display:grid;
-    padding-bottom: 190px;
     grid-template-columns: minmax(auto, 1200px);
     grid-template-areas:
     "why-zooov__subtitle"
@@ -774,31 +805,33 @@ html, body {
     grid-area: why-zooov__items;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-top: 3px;
     column-gap: 27px;
     row-gap: 50px;
+    margin-top: 3px;
 }
 
 .why-zooov__item {
     display: grid;
     grid-auto-flow: row;
-    grid-template: auto 1fr minmax(40px,auto) / 1fr;
+    grid-template: auto minmax(23px,auto) 1fr / 1fr;
 }
 
 .why-zooov__image {
     position: relative;
-    padding-bottom: 22px;
+    margin-bottom: 22px;
 }
 
+/* - Типографика ------------------------------------------- */
 .why-zooov__minisubtitle {
     padding-top: 0px;
     padding-bottom: 8px;
 }
 
 /* = ABOUT ZOOOV: FROM ZOOOV WITH CARE AND LOVE =============== */
+/* - Позиционирование -------------------------------------- */
 .about-zooov {
     display:grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". about-zooov__content .";
     background: url('../img/about-us/about-us-waves.png') -20px center no-repeat, #FFF4F3;
@@ -808,10 +841,9 @@ html, body {
     grid-area: about-zooov__content;
     display:grid;
     grid-template-columns: 46.33% 53.77%;
-    padding-top: 80px;
-    padding-bottom: 80px;
     grid-template-areas:
         "about-zooov__gallery about-zooov__description";
+    padding: 80px 0px;
 }
 
 .about-zooov__gallery {
@@ -857,7 +889,6 @@ html, body {
     position: absolute;
     width: 100%;
     height: auto;
-    top: -91px;
     left: -50px;
 }
 
@@ -872,14 +903,14 @@ html, body {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 135px;
+    top: 25px;
     left: -40px;
 }
 
 .about-zooov__description {
     grid-area: about-zooov__description;
-    padding-left: 9%;
-    padding-right: 10%;
+    margin-left: 9%;
+    margin-right: 10%;
 }
 
 .about-zooov__subtitle {
@@ -888,12 +919,16 @@ html, body {
     line-height: 130%;
 }
 
+/* - Типографика ------------------------------------------- */
+.about-zooov__text {
+    line-height: 130%;
+}
+
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
+/* - Позиционирование -------------------------------------- */
 .delivery {
     grid-area: delivery;
     display:grid;
-    padding-top: 180px;
-    padding-bottom: 200px;
     grid-template-columns: minmax(auto, 1200px);
     grid-template-areas:
     "delivery__subtitle"
@@ -902,8 +937,6 @@ html, body {
 
 .delivery__subtitle {
     grid-area: delivery__subtitle;
-    margin-top: 0px;
-    margin-bottom: 60px;
     display: grid;
     justify-self: start;
 }
@@ -912,20 +945,30 @@ html, body {
     grid-area: delivery__items;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-top: 3px;
     column-gap: 27px;
     row-gap: 50px;
+    margin-top: 2px;
 }
 
 .delivery__item {
     display: grid;
     grid-auto-flow: row;
-    grid-template: auto 1fr minmax(40px,auto) / 1fr;
+    grid-template: auto minmax(23px,auto) 1fr / 1fr;
 }
 
 .delivery__image {
     position: relative;
-    padding-bottom: 22px;
+    margin-bottom: 22px;
+}
+
+.image__heart {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* - Типографика ------------------------------------------- */
+.delivery__subtitle {
+    padding-bottom: 60px;
 }
 
 .delivery__minisubtitle {
@@ -934,6 +977,7 @@ html, body {
 }
 
 /* = FAQ ====================================================== */
+/* - Позиционирование -------------------------------------- */
 .faq {
     grid-area: faq;
     display:grid;
@@ -951,7 +995,22 @@ html, body {
     grid-area: faq__spoiler;
 }
 
+.spoiler__minisubtitle {
+    line-height: 140%;
+}
+
+/* - Типографика ------------------------------------------- */
+.spoiler__minisubtitle {
+    padding-top: 32px;
+}
+.spoiler__text {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0px;
+}
+
 /* = CONTACTS ================================================= */
+/* - Позиционирование -------------------------------------- */
 .contacts {
     grid-area: contacts;
     display:grid;
@@ -970,76 +1029,32 @@ html, body {
 }
 
 .contacts__subtitle {
-    font-family: 'Oswald', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 130%;
-    letter-spacing: 0.02em;
-    padding-top: 80px;
-    margin: 0px;
-    color: #FFFFFF;
+    margin-top: 80px;
 }
 
 .contacts__text {
-    font-size: 16px;
-    line-height: 140%;
-    color: #FFFFFF;
+    margin-top: 8px;
 }
 
 .contacts__phone {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 140%;
-    color: #FFFFFF;
-    padding-top: 32px;
-    padding-bottom: 24px;
+    margin-top: 32px;
+    margin-bottom: 24px;
 }
 
-.button_pink {
-    background: rgba(255, 255, 255, 0.2);
-    color: #FFFFFF;
-    margin-bottom: 16px;
-}
-
-.button_pink:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.contacts__text_two {
-    padding-top: 24px;
-    padding-bottom: 80px;
-    color: #FFFFFF;
+.contacts__insta {
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 
 .contacts__form__inputs {
     margin-top: 34px;
+    margin-bottom: 76px;
 }
 
 .contacts__minisubtitle {
-    color: #FFFFFF;
-    padding-top: 110px;
-}
-
-.contacts__form__text {
-    color: #FFFFFF;
-}
-
-.button_white {
-    background:#FFF4F3;
-    border: none;
-}
-
-.button_white a {
-    color: #EC7973;
-    text-decoration: none;
-}
-
-.button_white:hover {
-    background:#EAD1D0;
-}
-
-.button_white a:hover {
-    color: #961914;
+    line-height: 140%;
+    margin-top: 110px;
+    margin-bottom: 4px;
 }
 
 .inputs__name-tel {
@@ -1055,7 +1070,6 @@ html, body {
 }
 
 .contact-form__privacy {
-    color: #FFFFFF;
     max-width: 260px;
 }
 
@@ -1064,13 +1078,26 @@ html, body {
     justify-content: space-between;
 }
 
+.button_pink {
+    margin-bottom: 16px;
+}
+
+/* - Типографика ------------------------------------------- */
+.contacts__phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
 /* = FOOTER =================================================== */
+/* - Позиционирование -------------------------------------- */
 .footer {
     grid-area: footer;
     width: 100%;
 	background-color:#69120E;
 	display: grid;
-	grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+	grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
         ". footer__content .";
 }
@@ -1081,7 +1108,8 @@ html, body {
     justify-content: space-between;
 }
 
-.text-footer {
+/* - Типографика ------------------------------------------- */
+.text-footer, .text-footer a {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -1092,6 +1120,7 @@ html, body {
     color: rgba(255, 255, 255, 0.4);
     padding-top: 30px;
     padding-bottom: 30px;
+    text-decoration: none;
 }
 
 .footer__content div:not(:last-of-type) {
