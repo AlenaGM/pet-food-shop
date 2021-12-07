@@ -937,29 +937,163 @@ html, body {
 .faq {
     grid-area: faq;
     display:grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-columns: minmax(auto, 348px) minmax(auto, 76px) minmax(auto, 776px);
     grid-template-areas:
-        ". text .";
-    background-color:darkcyan;
+        "faq__subtitle . faq__spoiler";
+    margin-bottom: 180px;
+}
+
+.faq__subtitle {
+    grid-area: faq__subtitle;
+}
+
+.faq__spoiler {
+    grid-area: faq__spoiler;
 }
 
 /* = CONTACTS ================================================= */
 .contacts {
     grid-area: contacts;
     display:grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(1rem, 1fr);
     grid-template-areas:
-        ". text .";
-    background-color:darkgoldenrod;
+        ". contacts__how-to . contacts__form . .";
+    background: url(../img/contacts/contacts-wave-left.png) 0px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% top no-repeat, #961914;
+}
+
+.contacts__how-to {
+    grid-area: contacts__how-to;
+}
+
+.contacts__form {
+    grid-area: contacts__form;
+}
+
+.contacts__subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    padding-top: 80px;
+    margin: 0px;
+    color: #FFFFFF;
+}
+
+.contacts__text {
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.contacts__phone {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    color: #FFFFFF;
+    padding-top: 32px;
+    padding-bottom: 24px;
+}
+
+.button_pink {
+    background: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.button_pink:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.contacts__text_two {
+    padding-top: 24px;
+    padding-bottom: 80px;
+    color: #FFFFFF;
+}
+
+.contacts__form__inputs {
+    margin-top: 34px;
+}
+
+.contacts__minisubtitle {
+    color: #FFFFFF;
+    padding-top: 110px;
+}
+
+.contacts__form__text {
+    color: #FFFFFF;
+}
+
+.button_white {
+    background:#FFF4F3;
+    border: none;
+}
+
+.button_white a {
+    color: #EC7973;
+    text-decoration: none;
+}
+
+.button_white:hover {
+    background:#EAD1D0;
+}
+
+.button_white a:hover {
+    color: #961914;
+}
+
+.inputs__name-tel {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+}
+
+.inputs__question {
+    display: flex;
+    justify-content: stretch;
+    margin-bottom: 22px;
+}
+
+.contact-form__privacy {
+    color: #FFFFFF;
+    max-width: 260px;
+}
+
+.contact-form__privacy-button {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* = FOOTER =================================================== */
 .footer {
     grid-area: footer;
     width: 100%;
-	padding: 0px 16px 16px 16px;
-	background-color:darkolivegreen;
+	background-color:#69120E;
 	display: grid;
-	grid-template: 1fr / 1fr minmax(auto, 1200px) 1fr;
+	grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-areas:
+        ". footer__content .";
 }
 
+.footer__content {
+    grid-area: footer__content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-footer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.4);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer__content div:not(:last-of-type) {
+    padding-right: 10px;
+}
