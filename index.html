@@ -315,30 +315,23 @@
                 <div class="contacts__form">
                     <h3 class="contacts__minisubtitle minisubtitle _white">Остались вопросы?</h3>
                     <div class="text _white">Напишите нам и мы обязательно подробно на них ответим.</div>
+
                     <form class="contacts__form__inputs" action="#" method="get">
-                        <div class="inputs__name-tel">
-                            <div>
-                                <input type="text" name="username" value="" placeholder="Имя"
-                                tabindex="1" required/>
-                            </div>
-                            <div>
-                                <input type="text" name="usermail" value="" placeholder="Email *"
-                                tabindex="2" required/>
-                            </div>
+                        <div class="inputs__name-mail">
+                            <input class="inputs__name" type="text" name="name" value="" placeholder="Имя" tabindex="1" required/>
+                            <input class="inputs__mail" type="text" name="mail" value="" placeholder="E-mail" tabindex="2" required/>
                         </div>
                         <div class="inputs__question">
-                            <textarea name="question" id="" cols="30" rows="8"
-                                placeholder="Ваш вопрос..." tabindex="3"> </textarea>
+                            <textarea name="question" tabindex="3">Ваш вопрос... </textarea>
                         </div>
                         <div class="contact-form__privacy-button">
                             <div class="contact-form__privacy _white">
-                                <input  type="checkbox" name="privacy" value="OK" tabindex="4" required/>  Даю согласие на обработку персональных данных
+                                <input checked type="checkbox" name="privacy" value="OK" tabindex="4" required/>  Даю согласие на обработку персональных данных
                             </div>
-                            <button class="button button_peach" type="submit" tabindex="5">
-                                <a href="#popup">Отправить</a>
-                            </button>
+                            <button class="button button_peach" type="submit" tabindex="5">Отправить</button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </main>
