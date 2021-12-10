@@ -5,17 +5,14 @@ html, body {
 }
 
 .wrapper {
+    display: grid;
     min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-._container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0px 16px;
-    box-sizing: content-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(80px, auto) 1fr minmax(76px, auto);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
 ._ibg {
@@ -139,7 +136,11 @@ html, body {
 /* = HEADER ================================================ */
 /* - Позиционирование -------------------------------------- */
 .header {
-    position: absolute;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". header__container .";
     width: 100%;
     top: 0;
     left: 0;
@@ -157,20 +158,20 @@ html, body {
 }
 
 .header__container {
-    display:flex;
+    display:grid;
+    grid-area: header__container;
+    grid-template-columns: minmax(auto, 80px) minmax(auto, 1120px);
+    grid-template-areas:
+    "header__logo header__menu";
     min-height: 80px;
     align-items: center;
     padding-top: 16px;
 }
 
-.header__body {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .header__logo {
+    grid-area: header__logo;
     flex: 0 0 80px;
     position: relative;
     z-index: 3;
@@ -184,10 +185,13 @@ html, body {
 
 .header__burger {
     display: none;
+    grid-area: header__menu;
+    justify-self: right;
 }
 
 .header__menu {
-    margin: 0 0 0 391px;
+    grid-area: header__menu;
+    justify-self: right;
 }
 
 .header__button {
@@ -223,9 +227,7 @@ html, body {
 
 /* - Медиазапросы ------------------------------------------ */
 @media screen and (max-width: 1280px){
-    ._container {
-        padding: 16px 19px 0px 19px;
-    }
+
 
     .header__menu {
         margin: 0 0 0 156px;
@@ -374,21 +376,37 @@ html, body {
 
 /* = MAIN =================================================== */
 .main {
-    flex: 1 1 auto;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "intro"
+        "barf"
+        "diet-compo"
+        "diets"
+        "diet-calc"
+        "why-zooov"
+        "about-zooov"
+        "delivery"
+        "faq"
+        "contacts";
 }
+
 
 /* = INTRODUCTION =========================================== */
 /* - Позиционирование --------------------------------------- */
 .intro {
-    position: relative;
+    display:grid;
+    grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 410px) minmax(auto, 790px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". intro__body . .";
     min-height: 100vh;
 }
 
 .intro__body {
-    padding: 28.25vh 0px 28.125vh 0px;
-    position: relative;
-    max-width: 410px;
+    grid-area: intro__body;
     z-index: 2;
+    margin-top: 18.5%;
 }
 
 .intro__title {
@@ -462,10 +480,6 @@ html, body {
 }
 
 @media screen and (max-width: 768px){
-    .intro__body {
-        padding: 27.75vh 0px 23.19vh 0px;
-        max-width: 410px;
-    }
 
     .intro__title {
         font-size: 44px;
@@ -486,9 +500,9 @@ html, body {
 /* - Позиционирование -------------------------------------- */
 .barf {
     display:grid;
-    grid-template: 1fr / minmax(auto, 612px) minmax(auto, 588px);
+    grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 612px) minmax(auto, 588px) minmax(1rem, 1fr);
     grid-template-areas:
-        "barf__content barf__image";
+        ". barf__content barf__image .";
     justify-content: space-between;
 }
 
@@ -544,10 +558,13 @@ html, body {
 /* - Позиционирование -------------------------------------- */
 .diet-compo {
     display:grid;
-    grid-template: 1fr / minmax(auto, 1200px);
+    grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+    ". diet-compo__content .";
 }
 
 .diet-compo__content {
+    grid-area: diet-compo__content;
     display:grid;
     background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
     grid-template-columns: repeat(2, 50%);
@@ -665,11 +682,12 @@ html, body {
 /* = ZOOOV DIETS ============================================== */
 /* - Позиционирование -------------------------------------- */
 .diets {
-    display:grid;
-    grid-template-columns: minmax(auto, 326px) minmax(auto, 97px) minmax(auto, 777px);
+    grid-area: diets;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 326px) minmax(auto, 97px) minmax(auto, 777px) minmax(1rem, 1fr);
     grid-template-areas:
-        "diets__subtitle . diets__text"
-        "diets__items diets__items diets__items";
+        ". diets__subtitle . diets__text ."
+        ". diets__items diets__items diets__items  .";
 }
 
 .diets__subtitle {
@@ -745,11 +763,15 @@ html, body {
 /* = DIET CALCULATION ========================================= */
 /* - Позиционирование -------------------------------------- */
 .diet-calc {
+    grid-area: diet-calc;
     display:grid;
-    grid-template: 1fr / minmax(auto, 1200px);
+    grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". diet-compo__content .";
 }
 
 .diet-calc__content {
+    grid-area: diet-compo__content;
     display:grid;
     background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
     grid-template-columns: 66% 34%;
@@ -787,10 +809,10 @@ html, body {
 /* - Позиционирование -------------------------------------- */
 .why-zooov {
     display:grid;
-    grid-template-columns: minmax(auto, 1200px);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
-    "why-zooov__subtitle"
-    "why-zooov__items";
+    ". why-zooov__subtitle ."
+    ". why-zooov__items .";
 }
 
 .why-zooov__subtitle {
@@ -929,10 +951,10 @@ html, body {
 .delivery {
     grid-area: delivery;
     display:grid;
-    grid-template-columns: minmax(auto, 1200px);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
-    "delivery__subtitle"
-    "delivery__items";
+    ". delivery__subtitle ."
+    ". delivery__items .";
 }
 
 .delivery__subtitle {
@@ -981,9 +1003,9 @@ html, body {
 .faq {
     grid-area: faq;
     display:grid;
-    grid-template-columns: minmax(auto, 348px) minmax(auto, 76px) minmax(auto, 776px);
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 348px) minmax(auto, 76px) minmax(auto, 776px) minmax(1rem, 1fr);
     grid-template-areas:
-        "faq__subtitle . faq__spoiler";
+        ". faq__subtitle . faq__spoiler .";
     margin-bottom: 180px;
 }
 
