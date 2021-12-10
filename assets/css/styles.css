@@ -187,7 +187,7 @@ html, body {
 }
 
 .header__menu {
-    margin: 0 0 0 356px;
+    margin: 0 0 0 391px;
 }
 
 .header__button {
@@ -1070,12 +1070,20 @@ html, body {
 
 .contact-form__privacy {
     max-width: 260px;
+    display: inline-flex;
+}
+
+.contact-form__privacy p {
+    padding-left: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .contact-form__privacy-button {
     display: flex;
     justify-content: space-between;
 }
+
 
 .button_pink {
     margin-bottom: 16px;
@@ -1085,19 +1093,16 @@ html, body {
     background-color: rgba(255, 255, 255, 0.05);
     border: solid 1px rgba(255, 255, 255, 0.5);
     border-radius: 8px;
-    padding: 14px auto 14px 13px;
 }
 
 .inputs__name {
     margin-right: 12px;
     width:100%;
-    min-height: 48px;
 }
 
 .inputs__mail {
     margin-left: 12px;
     width:100%;
-    min-height: 48px;
 }
 
 .inputs__question textarea {
@@ -1129,6 +1134,12 @@ html, body {
     color: rgba(255, 255, 255, 1);
     opacity: 60%;
     align-content: center;
+}
+
+.inputs__name, .inputs__mail, .inputs__question textarea {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 13px;
 }
 
 /* = FOOTER =================================================== */
