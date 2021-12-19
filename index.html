@@ -14,52 +14,43 @@
 </head>
 <body>
     <div class="wrapper">
-
         <header class="header">
             <div class="header__container">
-
                     <a href class="header__logo">
-                        <img src="assets/img/logos/logo80.png" alt="Zooov company logo">
+                        <img class="header__img"src="assets/img/logos/logo80.png" alt="Zooov company logo">
                     </a>
                     <div class="header__burger">
                         <span></span>
                     </div>
-                    <nav class="header__menu menu">
+                    <nav class="header__menu">
                         <ul class="menu__list">
-                            <li><a href="" class="menu__link">BARF</a></li>
-                            <li><a href="" class="menu__link">Рационы</a></li>
-                            <li><a href="" class="menu__link">ZOOOV</a></li>
-                            <li><a href="" class="menu__link">О нас</a></li>
-                            <li><a href="" class="menu__link">Доставка</a></li>
-                            <li><a href="" class="menu__link">FAQ</a></li>
-                            <li><a href="" class="menu__link">Контакты</a></li>
+                            <li><a href="#barf" class="menu__link">BARF</a></li>
+                            <li><a href="#diets" class="menu__link">Рационы</a></li>
+                            <li><a href="#why-zooov" class="menu__link">ZOOOV</a></li>
+                            <li><a href="#about-zooov" class="menu__link">О нас</a></li>
+                            <li><a href="#delivery" class="menu__link">Доставка</a></li>
+                            <li><a href="#faq" class="menu__link">FAQ</a></li>
+                            <li><a href="#contacts" class="menu__link">Контакты</a></li>
                         </ul>
                         <div class="header__button">
-                            <a href class="button button_red">Выбрать рацион</a>
+                            <a href class="button button_color-red">Выбрать рацион</a>
                         </div>
                     </nav>
-
             </div>
         </header>
 
         <main class="main">
             <div class="intro">
-                <div class="intro__body">
+                <div class="intro__content">
                     <h1 class="intro__title">Питание, которое полюбит ваш хвостик</h1>
                     <div class="intro__text">Натуральные рационы питания для собак по системе BARF</div>
                     <div class="intro__button">
-                        <a href class="button button_red">Выбрать рацион</a>
+                        <a href class="button button_color-red">Выбрать рацион</a>
                     </div>
-                </div>
-                <div class="intro__image _ibg">
-                    <img src="assets/img/intro/intro-bg.jpg" alt="cover image: dog">
-                </div>
-                <div class="intro__zooov-stroke">
-                    <img src="assets/img/intro/zooov-stroke.jpg" alt="decorative writing: zooov">
                 </div>
             </div>
 
-            <div class="barf">
+            <div class="barf" id="barf">
                 <div class="barf__content">
                     <h2 class="barf__subtitle subtitle">Что такое BARF</h2>
                     <p class="barf__text text">BARF (Biologically Appropriate Raw Food) — система питания собак, основанная на сырых натуральных продуктах. Такой рацион максимально приближен к естественному пищевому поведению хищников, а значит биологически правилен. </p>
@@ -108,11 +99,41 @@
                         </ul>
                     </div>
                 </div>
+                <div class="diet-compo__slider slider">
+                    <div class="diet-compo__adult-dogs diet-compo__section slider__item">
+                        <h3 class="diet-compo__minisubtitle minisubtitle">Для взрослых</h3>
+                        <ul class="diet-compo__list_left">
+                            <li class="compo__item_meat">Мясо – 70%</li>
+                            <li class="compo__item_bones">Кости – 10%</li>
+                            <li class="compo__item_vegetables">Овощи – 7%</li>
+                            <li class="compo__item_liver">Печень – 5%</li>
+                        </ul>
+                        <ul class="diet-compo__list_right">
+                            <li class="compo__item_by-products">Субпродукты – 5%</li>
+                            <li class="compo__item_grains">Семена/Орехи – 2%</li>
+                            <li class="compo__item_fruits">Фрукты – 1%</li>
+                        </ul>
+                    </div>
+                    <div class="diet-compo__puppets diet-compo__section slider__item">
+                        <h3 class="diet-compo__minisubtitle minisubtitle">Для щенков</h3>
+                        <ul class="diet-compo__list_left">
+                            <li class="compo__item_meat">Мясо – 58%</li>
+                            <li class="compo__item_bones">Кости – 17%</li>
+                            <li class="compo__item_vegetables">Овощи – 7%</li>
+                            <li class="compo__item_liver">Печень – 7%</li>
+                        </ul>
+                        <ul class="diet-compo__list_right">
+                            <li class="compo__item_by-products">Субпродукты – 57</li>
+                            <li class="compo__item_grains">Семена/Орехи – 3%</li>
+                            <li class="compo__item_fruits">Фрукты – 1%</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="diets">
+            <div class="diets" id="diets">
                 <h2 class="diets__subtitle subtitle">Рационы ZOOOV</h2>
-                <div class="diets__text text _black">Система питания взрослой собаки не подойдет для щенка, поэтому мы создали разные
+                <div class="diets__text text text_color-black">Система питания взрослой собаки не подойдет для щенка, поэтому мы создали разные
                     по составу рационы ZOOOV. Вы сможете заказать полноценное питание исходя из возраста, веса и даже вкусовых предпочтений вашего друга. ZOOOV  заботится о каждой собаке.</div>
                 <div class="diets__items">
                     <div class="diets__item">
@@ -122,7 +143,7 @@
                         <div class="diets__descrition text">Подходит для ежедвеного кормления. Богат животными белками и Омега-3.</div>
                         <div class="diets_weight">700г / 500г / 300г / 150г / 100г</div>
                         <div class="diets_button">
-                            <a href="" class="button_white button">Заказать</a>
+                            <a href="" class="button_color-white button">Заказать</a>
                         </div>
                     </div>
                     <div class="diets__item">
@@ -132,7 +153,7 @@
                         <div class="diets__descrition text">Подходит для ежедвеного кормления. Богат животными белками и Омега-3.</div>
                         <div class="diets_weight">700г / 500г / 300г / 150г / 100г</div>
                         <div class="diets_button">
-                            <a href="" class="button_white button">Заказать</a>
+                            <a href="" class="button_color-white button">Заказать</a>
                         </div>
                     </div>
                     <div class="diets__item">
@@ -142,7 +163,7 @@
                         <div class="diets__descrition text">Подходит для ежедвеного кормления. Богат животными белками и Омега-3.</div>
                         <div class="diets_weight">700г / 500г / 300г / 150г / 100г</div>
                         <div class="diets_button">
-                            <a href="" class="button_white button">Заказать</a>
+                            <a href="" class="button_color-white button">Заказать</a>
                         </div>
                     </div>
                     <div class="diets__item">
@@ -152,7 +173,7 @@
                         <div class="diets__descrition text">Подходит для ежедневного кормления. Богат животными белками и Омега-3.</div>
                         <div class="diets_weight">700г / 500г / 300г / 150г / 100г</div>
                         <div class="diets_button">
-                            <a href="" class="button_white button">Заказать</a>
+                            <a href="" class="button_color-white button">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -164,38 +185,38 @@
                         <p>Рассчитаем в каком количестве нужно кормить вашего хвостика рационами Zooov</p>
                     </div>
                     <div class="diet-compo__button">
-                        <a href class="button button_red">Расчитать</a>
+                        <a href class="button button_color-red">Расчитать</a>
                     </div>
                 </div>
             </div>
 
-            <div class="why-zooov">
+            <div class="why-zooov" id="why-zooov">
                 <h2 class="why-zooov__subtitle subtitle">Почему ZOOOV</h2>
                 <div class="why-zooov__items">
                     <div class="why-zooov__item">
                         <div class="why-zooov__image"><img src="assets/img/why-zooov/natural.png"></div>
                         <h3 class="why-zooov__minisubtitle minisubtitle">Натурально</h3>
-                        <div class="why-zooov__descrition text _black">Все продукты тщательно отбираем у проверенных поставщиков.</div>
+                        <div class="why-zooov__descrition text text_color-black">Все продукты тщательно отбираем у проверенных поставщиков.</div>
                     </div>
                     <div class="why-zooov__item">
                         <div class="why-zooov__image"><img src="assets/img/why-zooov/healthy.png"></div>
                         <h3 class="why-zooov__minisubtitle minisubtitle">Здорово</h3>
-                        <div class="why-zooov__descrition text _black">Система питания, которая продлевает жизнь вашего хвостика.</div>
+                        <div class="why-zooov__descrition text text_color-black">Система питания, которая продлевает жизнь вашего хвостика.</div>
                     </div>
                     <div class="why-zooov__item">
                         <div class="why-zooov__image"><img src="assets/img/why-zooov/fast.png"></div>
                         <h3 class="why-zooov__minisubtitle minisubtitle">Быстро</h3>
-                        <div class="why-zooov__descrition text _black">Сделайте заказ на сайте и с вами свяжется  наш менеджер для уточнения деталей.</div>
+                        <div class="why-zooov__descrition text text_color-black">Сделайте заказ на сайте и с вами свяжется  наш менеджер для уточнения деталей.</div>
                     </div>
                     <div class="why-zooov__item">
                         <div class="why-zooov__image"><img src="assets/img/why-zooov/comfortable.png"></div>
                         <h3 class="why-zooov__minisubtitle minisubtitle">Удобно</h3>
-                        <div class="why-zooov__descrition text _black">Достаточно разморозить порцию ZOOOV,  удалить отрывную крышку с лотка и обед для вашего питомца готов.</div>
+                        <div class="why-zooov__descrition text text_color-black">Достаточно разморозить порцию ZOOOV,  удалить отрывную крышку с лотка и обед для вашего питомца готов.</div>
                     </div>
                 </div>
             </div>
 
-            <div class="about-zooov">
+            <div class="about-zooov" id="about-zooov">
                 <div class="about-zooov__content _container">
                     <div class="about-zooov__gallery">
                         <div class="gallery__big">
@@ -224,95 +245,95 @@
                 </div>
             </div>
 
-            <div class="delivery">
+            <div class="delivery" id="delivery">
                 <h2 class="delivery__subtitle subtitle">Как получить ZOOOV?</h2>
                 <div class="delivery__items">
                     <div class="delivery__item">
                         <div class="delivery__image"><img src="assets/img/delivery/package.png"></div>
                         <h3 class="delivery__minisubtitle minisubtitle">Закажите рацион</h3>
-                        <div class="delivery__descrition text _black">Выберите рацион для своей собаки. Если не знаете сколько
+                        <div class="delivery__descrition text text_color-black">Выберите рацион для своей собаки. Если не знаете сколько
                             и какой – мы подскажем.</div>
                     </div>
                     <div class="delivery__item">
                         <div class="delivery__image"><img src="assets/img/delivery/phonecall.png"></div>
                         <h3 class="delivery__minisubtitle minisubtitle">Подтвердите заказ</h3>
-                        <div class="delivery__descrition text _black">Мы свяжемся с вами для подтверждения заказа
+                        <div class="delivery__descrition text text_color-black">Мы свяжемся с вами для подтверждения заказа
                             и уточнения деталей.</div>
                     </div>
                     <div class="delivery__item">
                         <div class="delivery__image"><img src="assets/img/delivery/clock.png"></div>
                         <h3 class="delivery__minisubtitle minisubtitle">Ожидайте доставки</h3>
-                        <div class="delivery__descrition text _black">Привозим заказ на следующий день. По СПб – 350₽, при заказе от 3 500₽ – бесплатно. Лен. область – по договоренности.</div>
+                        <div class="delivery__descrition text text_color-black">Привозим заказ на следующий день. По СПб – 350₽, при заказе от 3 500₽ – бесплатно. Лен. область – по договоренности.</div>
                     </div>
                     <div class="delivery__item">
                         <div class="delivery__image image__heart"><img src="assets/img/delivery/heart.png"></div>
                         <h3 class="delivery__minisubtitle minisubtitle">Радуйте своего питомца</h3>
-                        <div class="delivery__descrition text _black">Просто разморозьте рацион: при комнатной температуре – 3 часа, в холодильнике – 12-15 часов.</div>
+                        <div class="delivery__descrition text text_color-black">Просто разморозьте рацион: при комнатной температуре – 3 часа, в холодильнике – 12-15 часов.</div>
                     </div>
                 </div>
             </div>
 
-            <div class="faq">
+            <div class="faq" id="faq">
                 <h2 class="faq__subtitle subtitle">Частые вопросы</h2>
-                <div class="faq__spoiler">
-                    <div class="spoiler__one">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Не опасны ли бактерии, которые находятся в сыром мясе?</h3>
-                        <p class="spoiler__text text">У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион BARF как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.</p>
+                <div class="faq__spoiler spoiler">
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Не опасны ли бактерии, которые находятся в сыром мясе?</div>
+                        <div class="spoiler__text text">У здоровых собак отличная иммунная система, готовая ко всем видам бактерий. Рацион BARF как раз укрепит иммунитет вашей собаки и защитит ее от влияния бактерий, которые находятся на улице или даже в вашем доме.</div>
                     </div>
-                    <div class="spoiler__two">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Надо ли давать дополнительно витамины к рациону BARF?</h3>
-                        <p class="spoiler__text text">Наш рацион уже включает в состав, кроме мяса и субпродуктов — свежие овощи, нерафинированные масла и даже фрукты, которые обеспечат вашего питомца всем необходимым комплексом витаминов и минералов.</p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Надо ли давать дополнительно витамины к рациону BARF?</div>
+                        <div class="spoiler__text text">Наш рацион уже включает в состав, кроме мяса и субпродуктов — свежие овощи, нерафинированные масла и даже фрукты, которые обеспечат вашего питомца всем необходимым комплексом витаминов и минералов.</div>
                     </div>
-                    <div class="spoiler__three">
-                        <h3 class="spoiler__minisubtitle minisubtitle">А если моя собака уже давно питается промышленным кормом и у нее нет проблем со здоровьем?</h3>
-                        <p class="spoiler__text text">Часто проблемы со здоровьем могут иметь накопительный эффект и если сейчас ваш четвероногий друг здоров, это не значит, что через пару лет не проявятся заболевания связанные именно с долгим употреблением сухого корма. Позаботиться о здоровье и долголетии вашего питомца вы можете уже сейчас, переведя его на здоровый рацион BARF. </p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">А если моя собака уже давно питается промышленным кормом и у нее нет проблем со здоровьем?</div>
+                        <div class="spoiler__text text">Часто проблемы со здоровьем могут иметь накопительный эффект и если сейчас ваш четвероногий друг здоров, это не значит, что через пару лет не проявятся заболевания связанные именно с долгим употреблением сухого корма. Позаботиться о здоровье и долголетии вашего питомца вы можете уже сейчас, переведя его на здоровый рацион BARF. </div>
                     </div>
-                    <div class="spoiler__four">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Можно ли смешивать натуральный корм и корм промышленного производства?</h3>
-                        <p class="spoiler__text text"> Пользы от смешанного принципа питания для вашего питомца не будет никакой. Сухой корм, в той или иной степени, будет провоцировать возникновение проблем с зубами и ЖКТ. Кроме того, смешанный рацион — гарантированный дисбаланс ингредиентов.</p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Можно ли смешивать натуральный корм и корм промышленного производства?</div>
+                        <div class="spoiler__text text"> Пользы от смешанного принципа питания для вашего питомца не будет никакой. Сухой корм, в той или иной степени, будет провоцировать возникновение проблем с зубами и ЖКТ. Кроме того, смешанный рацион — гарантированный дисбаланс ингредиентов.</div>
                     </div>
-                    <div class="spoiler__five">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Могу ли я сам составить для своей собаки рацион по системе BARF?</h3>
-                        <p class="spoiler__text text">В составе рациона должны присутствовать не только мясо и кости, но и субпродукты, овощи, масла и фрукты. Очень важно соблюсти правильные пропорции всех ингредиентов. К сожалению, сделать это в домашних условиях практически невозможно. </p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Могу ли я сам составить для своей собаки рацион по системе BARF?</div>
+                        <div class="spoiler__text text">В составе рациона должны присутствовать не только мясо и кости, но и субпродукты, овощи, масла и фрукты. Очень важно соблюсти правильные пропорции всех ингредиентов. К сожалению, сделать это в домашних условиях практически невозможно. </div>
                     </div>
-                    <div class="spoiler__six">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Присутствует ли в ZOOOV рационах рыба?</h3>
-                        <p class="spoiler__text text">При составлении рационов мы не используем продукты подвергавшиеся заморозке. К сожалению в Санкт-Петербурге не просто найти качественную свежую рыбу. В качестве альтернативы мы используем нерафинированное конопляное масло. Такое масло полностью удовлетворяет потребность организма в жирных кислотах. В масле из конопли содержатся витамины А, В1, В2, В3, В6, С, D и Е, цинк, фтор, железо, фосфор, сера, калий, магний и многие другие необходимые микроэлементы.</p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Присутствует ли в ZOOOV рационах рыба?</div>
+                        <div class="spoiler__text text">При составлении рационов мы не используем продукты подвергавшиеся заморозке. К сожалению в Санкт-Петербурге не просто найти качественную свежую рыбу. В качестве альтернативы мы используем нерафинированное конопляное масло. Такое масло полностью удовлетворяет потребность организма в жирных кислотах. В масле из конопли содержатся витамины А, В1, В2, В3, В6, С, D и Е, цинк, фтор, железо, фосфор, сера, калий, магний и многие другие необходимые микроэлементы.</div>
                     </div>
-                    <div class="spoiler__seven">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Как перевести питомца на натуральное питание?</h3>
-                        <p class="spoiler__text text">Существует два варианта перехода: быстрый и медленный. Выбор зависит от возраста собаки, ее здоровья и пищевых привычек. Собака привыкшая к еде с вашего стола, скорее всего, готова к быстрому переходу на сырое питание. Питомцы, которые длительное время питались сухим кормом, могут быть не готовы резко менять рацион.
-                            В любом случае, перед первым кормлением рекомендуется сделать голодную паузу на 24 часа.</p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Как перевести питомца на натуральное питание?</div>
+                        <div class="spoiler__text text">Существует два варианта перехода: быстрый и медленный. Выбор зависит от возраста собаки, ее здоровья и пищевых привычек. Собака привыкшая к еде с вашего стола, скорее всего, готова к быстрому переходу на сырое питание. Питомцы, которые длительное время питались сухим кормом, могут быть не готовы резко менять рацион.
+                            В любом случае, перед первым кормлением рекомендуется сделать голодную паузу на 24 часа.</div>
                     </div>
-                    <div class="spoiler__eight">
-                        <h3 class="spoiler__minisubtitle minisubtitle">Как готовить рацион ZOOOV?</h3>
-                        <p class="spoiler__text text">Мы доставляем порции необходимого объема замороженными, в специальных термосумках. Вы помещаете рацион в свой домашний морозильник. Перед кормлением порцию необходимо поместить для разморозки на ночь в холодильник или размораживать при комнатной температуре 3-4 часа. (НЕ ИСПОЛЬЗОВАТЬ МИКРОВОЛНОВКу!) Больше никакой обработке подвергать пищу не надо. Непосредственно перед кормление снять отрывную крышку. Благодаря качественной и продуманной упаковке во время разморозки ни в холодильнике, ни в кухне не появится посторонних запахов.
-                            Повторно замораживать порции не рекомендуется!</p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">Как готовить рацион ZOOOV?</div>
+                        <div class="spoiler__text text">Мы доставляем порции необходимого объема замороженными, в специальных термосумках. Вы помещаете рацион в свой домашний морозильник. Перед кормлением порцию необходимо поместить для разморозки на ночь в холодильник или размораживать при комнатной температуре 3-4 часа. (НЕ ИСПОЛЬЗОВАТЬ МИКРОВОЛНОВКу!) Больше никакой обработке подвергать пищу не надо. Непосредственно перед кормление снять отрывную крышку. Благодаря качественной и продуманной упаковке во время разморозки ни в холодильнике, ни в кухне не появится посторонних запахов.
+                            Повторно замораживать порции не рекомендуется!</div>
                     </div>
-                    <div class="spoiler__nine">
-                        <h3 class="spoiler__minisubtitle minisubtitle">При переходе на рацион ZOOOV у собаки начались проблемы с ЖКТ.
-                            Это нормально?</h3>
-                        <p class="spoiler__text text">При переводе вашего питомца на натуральный корм могут появиться симптомы детоксикации, такие как расстройство желудка, рвота, аллергическая реакция. Это нормальная реакция при перестройке пищеварительной системы. Проблемы могут продолжаться до 2-3 недель, но при строгом соблюдении выбранного рациона, состояние собаки не просто нормализуется, а значительно улучшится. При этом, стул вашего питомца также претерпит изменения — станет реже и уменьшится его количество. </p>
+                    <div class="spoiler__item">
+                        <div class="spoiler__minisubtitle minisubtitle">При переходе на рацион ZOOOV у собаки начались проблемы с ЖКТ.
+                            Это нормально?</div>
+                        <div class="spoiler__text text">При переводе вашего питомца на натуральный корм могут появиться симптомы детоксикации, такие как расстройство желудка, рвота, аллергическая реакция. Это нормальная реакция при перестройке пищеварительной системы. Проблемы могут продолжаться до 2-3 недель, но при строгом соблюдении выбранного рациона, состояние собаки не просто нормализуется, а значительно улучшится. При этом, стул вашего питомца также претерпит изменения — станет реже и уменьшится его количество. </div>
                     </div>
                 </div>
             </div>
 
-            <div class="contacts">
+            <div class="contacts" id="contacts">
                 <div class="contacts__how-to">
-                    <h2 class="contacts__subtitle subtitle _white">Контакты</h2>
-                    <p class="contacts__text text _white">Вы всегда можете с нами связаться по телефону или в мессенджерах</p>
+                    <h2 class="contacts__subtitle subtitle text_color-white">Контакты</h2>
+                    <p class="contacts__text text text_color-white">Вы всегда можете с нами связаться по телефону или в мессенджерах</p>
                     <div class="contacts__phone">+7 (900)000-00-00</div>
                     <div>
-                        <a href class="button button_pink">Написать в WhatsApp</a>
+                        <a href class="button button_color-pink">Написать в WhatsApp</a>
                     </div>
                     <div>
-                        <a href class="button button_pink">Написать в Telegram</a>
+                        <a href class="button button_color-pink">Написать в Telegram</a>
                     </div>
-                    <p class="contacts__insta text _white">Подписывайтесь на наш Instagram и следите за новостями</p>
+                    <p class="contacts__insta text text_color-white">Подписывайтесь на наш Instagram и следите за новостями</p>
                 </div>
                 <div class="contacts__form">
-                    <h3 class="contacts__minisubtitle minisubtitle _white">Остались вопросы?</h3>
-                    <div class="text _white">Напишите нам и мы обязательно подробно на них ответим.</div>
+                    <h3 class="contacts__minisubtitle minisubtitle text_color-white">Остались вопросы?</h3>
+                    <div class="text text_color-white">Напишите нам и мы обязательно подробно на них ответим.</div>
 
                     <form class="contacts__form__inputs" action="#" method="get">
                         <div class="inputs__name-mail">
@@ -323,10 +344,10 @@
                             <textarea name="question" tabindex="3">Ваш вопрос... </textarea>
                         </div>
                         <div class="contact-form__privacy-button">
-                            <div class="contact-form__privacy _white">
+                            <div class="contact-form__privacy text_color-white">
                                 <input type="checkbox" name="privacy" value="OK" tabindex="4" required/><p> Даю согласие на обработку персональных данных</p>
                             </div>
-                            <button class="button button_peach" type="submit" tabindex="5">Отправить</button>
+                            <button class="button button_color-peach" type="submit" tabindex="5">Отправить</button>
                         </div>
                     </form>
 
@@ -341,7 +362,8 @@
             </div>
         </footer>
     </div>
-<script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

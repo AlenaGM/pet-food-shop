@@ -15,31 +15,6 @@ html, body {
         "footer";
 }
 
-._ibg {
-    position: relative;
-}
-
-._ibg img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-.intro, .diet-calc, .why-zooov, .about-zooov, .delivery, .faq {
-    margin-bottom: 180px;
-}
-
-.barf, .diets {
-    margin-bottom: 80px;
-}
-
-.diet-compo {
-    margin-bottom: 200px;
-}
-
 /* - Типографика ------------------------------------------- */
 html, body {
     font-family: 'Montserrat', sans-serif;
@@ -68,12 +43,18 @@ html, body {
     color: #434242;
 }
 
-._white {
+.text_color-white {
     color: #FFFFFF;
 }
 
-._black {
+.text_color-black {
     color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+    .subtitle {
+        font-size: 40px;
+    }
 }
 
 /* - Оформление: ссылки, кнопки ---------------------------- */
@@ -92,43 +73,43 @@ html, body {
     text-decoration: none;
 }
 
-.button_red {
+.button_color-red {
     color: #FFFFFF;
     background: #961914;
 }
 
-.button_red:hover {
+.button_color-red:hover {
     background: #75110D;
 }
 
-.button_white {
+.button_color-white {
     color: #961914;
     background: #FFFFFF;
     border: solid 1px #961914;
 }
 
-.button_white:hover {
+.button_color-white:hover {
     background: #EAD1D0;
     border: none;
 }
 
-.button_pink {
+.button_color-pink {
     background: rgba(255, 255, 255, 0.2);
     color: #FFFFFF;
 }
 
-.button_pink:hover {
+.button_color-pink:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
-.button_peach {
+.button_color-peach {
     background: #FFF4F3;
     color: #EC7973;
     text-decoration: none;
     border: none;
 }
 
-.button_peach:hover {
+.button_color-peach:hover {
     background: #EAD1D0;
     color: #961914;
 }
@@ -138,18 +119,17 @@ html, body {
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
-    grid-template-areas:
-        ". header__container .";
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
+    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
+    grid-template-areas:
+        ". header__container .";
 }
 
 .header::before {
     content: '';
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -158,26 +138,23 @@ html, body {
 }
 
 .header__container {
-    display:grid;
     grid-area: header__container;
-    grid-template-columns: minmax(auto, 80px) minmax(auto, 1120px);
-    grid-template-areas:
-    "header__logo header__menu";
+    display:grid;
     min-height: 80px;
     align-items: center;
     padding-top: 16px;
+    grid-template-columns: minmax(auto, 80px) minmax(auto, 1120px);
+    grid-template-areas:
+    "header__logo header__menu";
 }
-
-
 
 .header__logo {
     grid-area: header__logo;
-    flex: 0 0 80px;
     position: relative;
     z-index: 3;
 }
 
-.header__logo img {
+.header__img {
     max-width: 100%;
     display: block;
     object-fit: cover;
@@ -185,17 +162,11 @@ html, body {
 
 .header__burger {
     display: none;
-    grid-area: header__menu;
-    justify-self: right;
 }
 
 .header__menu {
     grid-area: header__menu;
     justify-self: right;
-}
-
-.header__button {
-    display:none;
 }
 
 .menu__list {
@@ -208,7 +179,11 @@ html, body {
 }
 
 .menu__list li:not(:last-of-type) {
-    margin-right: 50px;
+    margin-right: 53px;
+}
+
+.header__button {
+    display:none;
 }
 
 /* - Типографика ------------------------------------------- */
@@ -222,27 +197,11 @@ html, body {
 }
 
 .menu__link:hover {
-    text-decoration: underline 2px #961914;
+    text-decoration: underline 3px #961914;
 }
 
 /* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 1280px){
-
-
-    .header__menu {
-        margin: 0 0 0 156px;
-    }
-
-    .intro__title {
-        font-size: 49px;
-    }
-
-    .intro__text {
-        font-size: 19px;
-    }
-}
-
-@media screen and (max-width: 1030px){
+@media screen and (max-width: 1023px){
     body.lock {
         overflow: hidden;
     }
@@ -252,25 +211,25 @@ html, body {
     }
 
     .header__container {
-        height: 60px;
-    }
-
-    .header__body {
-        height: 60px;
+        grid-area: header__container;
+        display:grid;
+        min-height: 60px;
         width: 100%;
-        display: flex;
-    }
-
-    .header__logo {
-        flex: 0 0 60px;
+        align-items: center;
+        padding-top: 16px;
+        grid-template-columns: minmax(auto, 60px) minmax(auto, 933px);
+        grid-template-areas:
+        "header__logo header__burger";
     }
 
     .header__burger {
+        grid-area: header__burger;
         display: block;
         position: relative;
         width: 30px;
         height: 20px;
         z-index: 3;
+        justify-self: right;
     }
 
     .header__burger::before,
@@ -354,23 +313,17 @@ html, body {
     }
 
     .menu__link {
-    color:#000000;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 140%;
-    text-align: center;
+        color:#000000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 140%;
+        text-align: center;
     }
 
     .header__button {
         display:block;
-        padding-top: 32px;
-        padding-bottom: 62px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    .header__button {
         padding-top: 102px;
+        padding-bottom: 62px;
     }
 }
 
@@ -392,6 +345,41 @@ html, body {
         "contacts";
 }
 
+.intro, .diet-calc, .why-zooov, .about-zooov, .delivery, .faq {
+    margin-bottom: 180px;
+}
+
+.barf, .diets {
+    margin-bottom: 80px;
+}
+
+.diet-compo {
+    margin-bottom: 200px;
+}
+
+@media screen and (max-width: 1024px){
+    .intro, .diet-calc, .why-zooov, .about-zooov, .delivery, .faq {
+        margin-bottom: 80px;
+    }
+
+    .barf, .diets {
+        margin-bottom: 60px;
+    }
+
+    .diet-compo {
+        margin-bottom: 100px;
+    }
+
+    .why-zooov {
+        margin-bottom: 133px;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .barf {
+        margin-bottom: 0px;
+    }
+}
 
 /* = INTRODUCTION =========================================== */
 /* - Позиционирование --------------------------------------- */
@@ -399,51 +387,31 @@ html, body {
     display:grid;
     grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 410px) minmax(auto, 790px) minmax(1rem, 1fr);
     grid-template-areas:
-        ". intro__body . .";
+        ". intro__content . .";
     min-height: 100vh;
+    margin-top: -96px;
+    background: url('../img/intro/zooov-stroke.jpg') 100% center no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
 }
 
-.intro__body {
-    grid-area: intro__body;
+.intro__content {
+    grid-area: intro__content;
     z-index: 2;
-    margin-top: 18.5%;
+    align-self: center;
+    margin-top: 226px;
+    margin-bottom: 225px;
 }
 
 .intro__title {
-    margin: 0px 0px 1.25vh 0px;
+    margin: 0px 0px 10px 0px;
 }
 
 .intro__text {
     max-width: 370px;
-    margin: 0px 0px 3.125vh 0px;
-    padding-right: 60px;
+    margin: 0px 0px 25px 0px;
 }
 
 .intro__button {
     display: inline-flex;
-}
-
-.intro__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.intro__zooov-stroke {
-    position: absolute;
-    right:0;
-    top: 20%;
-    max-height: 548px;
-}
-
-.intro__zooov-stroke img {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
 }
 
 /* - Типографика ------------------------------------------- */
@@ -460,39 +428,41 @@ html, body {
     font-size: 20px;
     line-height: 140%;
     color: #FFFFFF;
+    padding-right: 60px;
 }
 
 /* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 823px){
-    .intro__title {
-        font-size: 49px;
-    }
-
-    .intro__text {
-        font-size: 18px;
-    }
-
-    .intro__zooov-stroke {
-        height: 334px;
-        top: auto;
-        bottom: 7px;
+@media screen and (max-width: 1023px) {
+    .intro {
+        grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 410px) minmax(auto, 583px) minmax(1rem, 1fr);
+        grid-template-areas:
+        ". intro__content . .";
+        margin-top: -80px;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 640px) {
+    .intro {
+        grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 410px) 1fr minmax(1rem, 1fr);
+        grid-template-areas:
+        ". intro__content . .";
+        background: url('../img/intro/zooov-stroke-small.jpg') 100% 100% no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
+    }
+
+    .intro__content {
+        margin-top: 207px;
+        margin-bottom: 173px;
+    }
 
     .intro__title {
+        margin: 0px 0px 24px 0px;
         font-size: 44px;
     }
 
     .intro__text {
-        font-size: 19px;
-    }
-}
-
-@media screen and (max-width: 375px){
-    .intro__zooov-stroke {
-        height: 334px;
+        margin: 0px 0px 48px 0px;
+        font-size: 18px;
+        padding-right: 130px;
     }
 }
 
@@ -554,6 +524,31 @@ html, body {
     margin: 0px 6px 2px 0px;
     }
 
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1023px) {
+    .barf {
+        display:grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 993px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". barf__content ."
+            ". barf__image .";
+        justify-content: space-between;
+    }
+
+    .barf__content {
+        margin-bottom: 24px;
+    }
+
+    .barf__subtitle {
+        padding-top: 0px;
+        padding-bottom: 8px;
+    }
+
+    .barf__text {
+        line-height: 150%;
+    }
+}
+
 /* = DIET COMPOSITION ========================================= */
 /* - Позиционирование -------------------------------------- */
 .diet-compo {
@@ -561,6 +556,10 @@ html, body {
     grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
     grid-template-areas:
     ". diet-compo__content .";
+}
+
+.diet-compo__slider {
+    display: none;
 }
 
 .diet-compo__content {
@@ -677,6 +676,112 @@ html, body {
     font-weight: 500;
     line-height: 250%;
     color: #434242;
+}
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1023px) {
+    .diet-compo {
+        display:grid;
+        grid-template: 1fr / minmax(1rem, 1fr) minmax(auto, 993px) minmax(1rem, 1fr);
+        grid-template-areas:
+        ". diet-compo__slider .";
+    }
+
+    .diet-compo__content {
+        display:none;
+    }
+
+    .diet-compo__slider {
+        grid-area: diet-compo__slider;
+        background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
+        display: grid;
+    }
+
+    .slick-list {
+        overflow: hidden;
+    }
+
+    .slick-track {
+        display: flex;
+    }
+
+    .slider {
+        position:relative;
+        padding: 0px 40px;
+    }
+
+    .slick-arrow {
+        position:absolute;
+        top: 50%;
+        margin: -25px 0px 0px 0px;
+        z-index: 2;
+        font-size: 0;
+        width: 25px;
+        height: 50px;
+        border: none;
+    }
+
+    .slick-arrow.slick-prev {
+        left: 0;
+        background: url('../img/diet-compo/left-red-arrow.svg') 0 0 / 100% no-repeat;
+    }
+
+    .slick-arrow.slick-next {
+        right: 0;
+        background: url('../img/diet-compo/right-red-arrow.svg') 0 0 / 100% no-repeat;
+    }
+
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        padding-inline-start: 0px;
+    }
+
+    .slider.slick-dots li{
+        list-style: none;
+        margin: 0px 10px;
+    }
+
+    .slick-dots button{
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border: 1px solid #8B1A12;
+        border-radius: 50%;
+        padding: 4px;
+        margin: 4px;
+    }
+
+    .slick-dots li.slick-active button{
+        background-color: #8B1A12;
+    }
+}
+
+@media screen and (max-width: 618px) {
+    .diet-compo__section {
+        display:grid;
+        margin: 0px 16px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "diet-compo__minisubtitle"
+            "diet-compo__list_left"
+            "diet-compo__list_right";
+    }
+
+    .diet-compo__minisubtitle, .diet-compo__list_left, .diet-compo__list_right {
+        margin-left: 25%;
+    }
+
+    .diet-compo__list_left {
+        margin-bottom: 0px;
+    }
+
+    .diet-compo__list_right {
+        margin-top: 0px;
+    }
 }
 
 /* = ZOOOV DIETS ============================================== */
@@ -1021,13 +1126,65 @@ html, body {
     line-height: 140%;
 }
 
+/**/
+
+.spoiler {
+}
+.spoiler__item {
+
+}
+
+.spoiler__minisubtitle {
+    position: relative;
+    padding: 0px 0px 0px 30px;
+    cursor: pointer;
+}
+
+.spoiler__minisubtitle::before {
+    transform: rotate(40deg);
+    left:0;
+}
+
+.spoiler__minisubtitle::after {
+    transform: rotate(-40deg);
+    left:6.5px;
+}
+
+.spoiler__minisubtitle::before,
+.spoiler__minisubtitle::after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background-color: #8B1A12;
+    position: absolute;
+    top: 45px;
+    transition: all 0.3s ease 0s;
+}
+
+.spoiler__minisubtitle.header.active:before,
+.spoiler__minisubtitle.header.active:after {
+    background-color: blue;
+}
+
+.spoiler__minisubtitle.header.active:before {
+    transform: rotate(-40deg);
+}
+
+.spoiler__minisubtitle.header.active:after {
+    transform: rotate(40deg);
+}
+
+.spoiler__text {
+    display: none;
+}
+
+
 /* - Типографика ------------------------------------------- */
 .spoiler__minisubtitle {
     padding-top: 32px;
 }
 .spoiler__text {
     padding-top: 12px;
-    padding-bottom: 12px;
     margin: 0px;
 }
 
@@ -1107,7 +1264,7 @@ html, body {
 }
 
 
-.button_pink {
+.button_color-pink {
     margin-bottom: 16px;
 }
 
