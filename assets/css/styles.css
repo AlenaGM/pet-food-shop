@@ -875,7 +875,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 557px) {
+@media screen and (max-width: 577px) {
     .diets {
         grid-area: diets;
         display: grid;
