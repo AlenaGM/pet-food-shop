@@ -710,27 +710,6 @@ html, body {
         padding: 0px 40px;
     }
 
-    .slick-arrow {
-        position:absolute;
-        top: 50%;
-        margin: -25px 0px 0px 0px;
-        z-index: 2;
-        font-size: 0;
-        width: 25px;
-        height: 50px;
-        border: none;
-    }
-
-    .slick-arrow.slick-prev {
-        left: 0;
-        background: url('../img/diet-compo/left-red-arrow.svg') 0 0 / 100% no-repeat;
-    }
-
-    .slick-arrow.slick-next {
-        right: 0;
-        background: url('../img/diet-compo/right-red-arrow.svg') 0 0 / 100% no-repeat;
-    }
-
     .slick-dots {
         display: flex;
         align-items: center;
@@ -752,8 +731,8 @@ html, body {
         border: 1px solid #8B1A12;
         border-radius: 50%;
         padding: 4px;
-        margin: 4px;
-    }
+        margin: 35px 4px 4px 4px;
+        }
 
     .slick-dots li.slick-active button{
         background-color: #8B1A12;
@@ -781,6 +760,12 @@ html, body {
 
     .diet-compo__list_right {
         margin-top: 0px;
+    }
+
+    .diet-compo__slider {
+        grid-area: diet-compo__slider;
+        background: url('../img/common/long-vert-wave-forpinkbg.png') 50%/contain no-repeat, #EAD1D0;
+        display: grid;
     }
 }
 
@@ -814,6 +799,10 @@ html, body {
     margin-top: 72px;
 }
 
+.diets__slider {
+    display: none;
+}
+
 .diets__item {
     display: grid;
     grid-auto-flow: row;
@@ -836,12 +825,12 @@ html, body {
     object-fit: cover;
 }
 
-.diets_button {
+.diets__button {
     justify-self: start;
 }
 
 /* - Типографика ------------------------------------------- */
-.diets_destination {
+.diets__for {
     font-size: 16px;
     font-weight: 700;
     padding-bottom: 4px;
@@ -861,8 +850,61 @@ html, body {
     padding-bottom: 11px;
 }
 
-.diets_weight {
+.diets__weight {
     padding-bottom: 24px;
+}
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 835px) {
+    .diets {
+        grid-area: diets;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 326px) minmax(auto, 97px) minmax(auto, 777px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". diets__subtitle diets__subtitle diets__subtitle ."
+            ". diets__text diets__text diets__text ."
+            ". diets__items diets__items diets__items  .";
+    }
+
+    .diets__subtitle {
+        padding-bottom: 8px;
+    }
+
+    .diets__text {
+        margin: 16px 0px;
+    }
+}
+
+@media screen and (max-width: 557px) {
+    .diets {
+        grid-area: diets;
+        display: grid;
+        grid-template-columns: minmax(1rem, 1fr) minmax(auto, 537px) minmax(1rem, 1fr);
+        grid-template-areas:
+            ". diets__subtitle ."
+            ". diets__slider  .";
+    }
+
+    .diets__text {
+        display: none;
+    }
+
+    .diets__items {
+        display: none;
+    }
+
+    .diets__slider {
+        display: grid;
+        grid-area: diets__slider;
+    }
+
+    .diets__subtitle {
+        padding-bottom: 70px;
+    }
+
+    .diets__text {
+        margin: 16px 0px;
+    }
 }
 
 /* = DIET CALCULATION ========================================= */
