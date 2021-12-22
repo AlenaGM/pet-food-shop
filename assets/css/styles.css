@@ -1002,6 +1002,7 @@ html, body {
     .diet-calc__button {
         grid-area: diet-calc__button;
         margin-bottom: 32px;
+    }
 }
 
 /* = WHY ZOOOV ================================================ */
