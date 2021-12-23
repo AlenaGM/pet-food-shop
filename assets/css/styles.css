@@ -902,7 +902,7 @@ html, body {
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 529px) minmax(24px, 1fr);
         grid-template-areas:
             ". diets__subtitle ."
-            ". diets__slider .";
+            ". diets__slider diets__slider";
     }
 
     .diets__text {
@@ -916,8 +916,8 @@ html, body {
     .diets__slider {
         display: grid;
         grid-area: diets__slider;
-        padding: 0px 40px;
         justify-self: center;
+        width: 100%;
     }
 
     .diets__subtitle {
@@ -926,6 +926,16 @@ html, body {
 
     .diets__text {
         margin: 16px 0px;
+    }
+
+    .diets__item {
+        transition: all 0.3s ease 0.3s;
+        opacity: 0.4;
+    }
+
+    .diets__item.slick-center {
+        opacity: 1;
+        margin-left: -47px;
     }
 }
 

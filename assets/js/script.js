@@ -15,11 +15,21 @@ $(document).ready(function() {
 });
 });
 
+
+
 $(document).ready(function() {
-  $('.slider').slick({
-    arrows:true,
+  $('.diet-compo__slider').slick({
+    arrows:false,
     dots:true,
     centerMode: false
+  });
+});
+
+$(document).ready(function() {
+  $('.diets__slider').slick({
+    arrows:false,
+    dots:true,
+    centerMode: true
   });
 });
 
