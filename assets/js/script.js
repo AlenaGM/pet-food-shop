@@ -9,15 +9,15 @@ $(document).ready(function() {
   $('.diet-compo__slider').slick({
     arrows:false,
     dots:true,
-    centerMode: false
+    centerMode:false
   });
 });
 
 $(document).ready(function() {
   $('.diets__slider').slick({
-    arrows:false,
+    arrows:true,
     dots:true,
-    centerMode: true
+    centerMode:true,
   });
 });
 
