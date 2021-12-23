@@ -1231,14 +1231,6 @@ html, body {
     line-height: 140%;
 }
 
-/**/
-
-.spoiler {
-}
-.spoiler__item {
-
-}
-
 .spoiler__minisubtitle {
     position: relative;
     padding: 0px 0px 0px 30px;
@@ -1281,6 +1273,22 @@ html, body {
 
 .spoiler__text {
     display: none;
+}
+
+@media screen and (max-width: 835px) {
+    .faq {
+        grid-area: faq;
+        display: grid;
+        margin-bottom: 80px;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 787px) minmax(24px, 1fr);
+        grid-template-areas:
+            ". faq__subtitle ."
+            ". faq__spoiler .";
+    }
+
+    .faq__subtitle {
+        padding-bottom: 8px;
+    }
 }
 
 /* - Типографика ------------------------------------------- */
