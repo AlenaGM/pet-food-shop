@@ -1266,23 +1266,22 @@ html, body {
     transition: all 0.3s ease 0s;
 }
 
-.spoiler__minisubtitle.header.active:before,
-.spoiler__minisubtitle.header.active:after {
-    background-color: blue;
+.spoiler__minisubtitle.active:before,
+.spoiler__minisubtitle.active:after {
+    background-color: #8B1A12;
 }
 
-.spoiler__minisubtitle.header.active:before {
+.spoiler__minisubtitle.active:before {
     transform: rotate(-40deg);
 }
 
-.spoiler__minisubtitle.header.active:after {
+.spoiler__minisubtitle.active:after {
     transform: rotate(40deg);
 }
 
 .spoiler__text {
     display: none;
 }
-
 
 /* - Типографика ------------------------------------------- */
 .spoiler__minisubtitle {
