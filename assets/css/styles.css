@@ -1437,6 +1437,13 @@ body {
 .delivery__image {
     position: relative;
     margin-bottom: 22px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.delivery__arrow {
+    padding-top: 10px;
 }
 
 /* - Типографика ------------------------------------------- */
@@ -1452,6 +1459,18 @@ body {
 .delivery__minisubtitle {
     padding-top: 0px;
     padding-bottom: 8px;
+}
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 574px ) {
+    .delivery__arrow {
+        display: none;
+    }
+
+    .delivery__items {
+        background: url('../img/delivery/deliveryarrow-mobile.png') 0 63px/auto 90% no-repeat;
+        padding-left: 24px;
+    }
 }
 
 /* = FAQ ====================================================== */
