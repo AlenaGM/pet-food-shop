@@ -1070,6 +1070,13 @@ body {
     margin-bottom: 22px;
 }
 
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 767px) {
+    .why-zooov {
+        margin-bottom: 80px;
+    }
+}
+
 /* - Типографика ------------------------------------------- */
 .why-zooov__minisubtitle {
     padding-top: 0px;
@@ -1217,9 +1224,7 @@ body {
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 961px) minmax(24px, 1fr);
         grid-template-areas:
             ". about-zooov__content .";
-        background: url('../img/about-us/about-us-waves.png') 100% 100%/contain no-repeat, greenyellow
-            /*#FFF4F3*/
-        ;
+        background: url('../img/about-us/about-us-waves.png') 100% 100%/contain no-repeat, #FFF4F3;
     }
 
     .about-zooov__content {
@@ -1230,8 +1235,8 @@ body {
         grid-template-areas:
             "about-zooov__description"
             "about-zooov__gallery";
-        padding-top: 0px;
-        padding-bottom: 40px;
+        padding: 0px;
+        margin-bottom: 40px;
     }
 
     .about-zooov__gallery {
@@ -1481,14 +1486,14 @@ body {
     position: absolute;
     right: 10px;
     top: 40px;
+}
+
+.spoiler__minisubtitle:before {
+    transform: rotate(90deg);
     transition: all 0.3s ease 0s;
 }
 
 .spoiler__minisubtitle.active:before {
-    transform: rotate(-90deg);
-}
-
-.spoiler__minisubtitle.active:after {
     transform: rotate(0deg);
 }
 
