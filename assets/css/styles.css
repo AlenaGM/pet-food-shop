@@ -1217,7 +1217,7 @@ body {
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 961px) minmax(24px, 1fr);
         grid-template-areas:
             ". about-zooov__content .";
-        background: url('../img/about-us/about-us-waves.png') 100% 100%/contain no-repeat, blueviolet
+        background: url('../img/about-us/about-us-waves.png') 100% 100%/contain no-repeat, greenyellow
             /*#FFF4F3*/
         ;
     }
