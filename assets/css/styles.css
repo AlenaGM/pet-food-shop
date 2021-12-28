@@ -1036,6 +1036,7 @@ body {
 /* - Позиционирование -------------------------------------- */
 .why-zooov {
     display: grid;
+    background: url('../img/common/long-wave-forwhitebg.png') 0px center/contain no-repeat;
     grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
     grid-template-areas:
         ". why-zooov__subtitle ."
@@ -1068,6 +1069,13 @@ body {
 .why-zooov__image {
     position: relative;
     margin-bottom: 22px;
+}
+
+@media screen and (max-width: 574px ) {
+    .why-zooov {
+        display: grid;
+        background: url('../img/common/long-wave-forwhitebg.png') 0px 20%/contain no-repeat, url('../img/common/long-wave-forwhitebg.png') 0px 80%/contain no-repeat;
+    }
 }
 
 /* - Медиазапросы ------------------------------------------ */
@@ -1461,6 +1469,10 @@ body {
     padding-bottom: 8px;
 }
 
+.cue {
+    color: #8B1A12;
+}
+
 /* - Медиазапросы ------------------------------------------ */
 @media screen and (max-width: 574px ) {
     .delivery__arrow {
@@ -1559,14 +1571,43 @@ body {
 .contacts {
     grid-area: contacts;
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(1rem, 1fr);
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
     grid-template-areas:
-        ". contacts__how-to . contacts__form . .";
-    background: url(../img/contacts/contacts-wave-left.png) 0px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% top no-repeat, #961914;
+        ". contacts__how-to contacts__pictures_dog-meat contacts__form contacts__pictures_apple .";
+    background: url(../img/contacts/contacts-wave-left.png) 24px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% -63px no-repeat, #961914;
 }
 
 .contacts__how-to {
     grid-area: contacts__how-to;
+}
+
+.contacts__pictures_dog-meat {
+    grid-area: contacts__pictures_dog-meat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contacts__pictures_apple {
+    grid-area: contacts__pictures_apple;
+}
+
+.contacts__apple {
+    position: relative;
+}
+
+.contacts__apple img {
+    width: 100px;
+    position: absolute;
+    top: 450px;
+}
+
+.contacts__dog img {
+    width: 70%;
+}
+
+.contact__apple img {
+    width: 60px;
 }
 
 .contacts__form {
