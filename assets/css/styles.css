@@ -1154,7 +1154,121 @@ html, body {
 .about-zooov__text {
     line-height: 130%;
 }
+/*хорошо до 1249*/
 
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1239px) {
+
+}
+
+@media screen and (max-width: 768px) { /*разбить на 2 от 691*/
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 719px) minmax(24px, 1fr);
+        grid-template-areas:
+            ". about-zooov__content .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+    }
+
+    .about-zooov__content {
+        grid-area: about-zooov__content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.8fr;
+        grid-template-areas:
+            "about-zooov__description"
+            "about-zooov__gallery";
+        padding: 0px;
+    }
+
+    .about-zooov__description {
+        grid-area: about-zooov__description;
+        margin: 0px;
+    }
+
+    .about-zooov__subtitle {
+        margin-bottom: 24px;
+    }
+
+    .about-zooov__gallery {
+        grid-area: about-zooov__gallery;
+        display: grid;
+        grid-template-columns: minmax(auto, 249px) minmax(auto, 335px) minmax(auto, 135px);
+        padding-bottom: 40px;
+    }
+
+    .about-zooov__description {
+        grid-area: about-zooov__description;
+        margin: 0px;
+    }
+
+    .about-zooov__subtitle {
+        margin-bottom: 24px;
+    }
+
+    .gallery__dog img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: -50px;
+        top: -5vh;
+    }
+
+    .gallery__heart img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 8.5vh;
+        left: -40px;
+    }
+}
+
+
+@media screen and (max-width: 579px) { /*ниже все классно*/
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 491px) minmax(24px, 1fr);
+        grid-template-areas:
+            ". about-zooov__content .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+    }
+
+    .about-zooov__content {
+        grid-area: about-zooov__content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.9fr;
+        grid-template-areas:
+            "about-zooov__description"
+            "about-zooov__gallery";
+        padding: 0px;
+    }
+
+    .about-zooov__description {
+        grid-area: about-zooov__description;
+        margin: 0px;
+    }
+
+    .about-zooov__subtitle {
+        margin-bottom: 24px;
+    }
+
+    .gallery__dog img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        left: -50px;
+        top: -5vh;
+    }
+
+    .gallery__heart img{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 8.5vh;
+        left: -40px;
+    }
+}
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
 /* - Позиционирование -------------------------------------- */
 .delivery {
