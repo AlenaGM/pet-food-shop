@@ -1245,7 +1245,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1005px) {
     .about-zooov {
         display:grid;
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
@@ -1253,7 +1253,7 @@ body {
         grid-template-areas:
         ". about-zooov__description ."
         ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') bottom left/cover no-repeat, #FFF4F3;
+        background: url('../img/about-us/about-us-waves-mobile.png') bottom right/contain no-repeat, #FFF4F3;
         padding: 0px;
     }
 
@@ -1291,13 +1291,7 @@ body {
 
 @media screen and (max-width: 960px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 2fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
         padding: 0px;
     }
 
@@ -1322,14 +1316,7 @@ body {
 
 @media screen and (max-width: 868px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.8fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
-        padding: 0px;
     }
 
     .gallery__heart {
@@ -1349,14 +1336,7 @@ body {
 
 @media screen and (max-width: 781px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.6fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
-        padding: 0px;
     }
 
     .gallery__heart {
@@ -1366,14 +1346,7 @@ body {
 
 @media screen and (max-width: 700px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.3fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
-        padding: 0px;
     }
 
     .gallery__heart {
@@ -1383,14 +1356,7 @@ body {
 
 @media screen and (max-width: 623px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.1fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
-        padding: 0px;
     }
 }
 
@@ -1402,14 +1368,7 @@ body {
 
 @media screen and (max-width: 578px) {
     .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 0.9fr;
-        grid-template-areas:
-        ". about-zooov__description ."
-        ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
-        padding: 0px;
     }
 
 
