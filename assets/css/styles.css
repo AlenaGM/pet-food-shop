@@ -1095,18 +1095,10 @@ body {
 /* - Позиционирование -------------------------------------- */
 .about-zooov {
     display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 556px) minmax(auto, 644px) minmax(24px, 1fr);
     grid-template-areas:
-        ". about-zooov__content .";
+        ". about-zooov__gallery about-zooov__description .";
     background: url('../img/about-us/about-us-waves.png') -20px center no-repeat, #FFF4F3;
-}
-
-.about-zooov__content {
-    grid-area: about-zooov__content;
-    display: grid;
-    grid-template-columns: 46.33% 53.77%;
-    grid-template-areas:
-        "about-zooov__gallery about-zooov__description";
     padding: 80px 0px;
 }
 
@@ -1147,19 +1139,21 @@ body {
     position: relative;
     max-width: 183px;
     z-index: 2;
+    left: -50px;
 }
 
 .gallery__dog img {
     position: absolute;
     width: 100%;
     height: auto;
-    left: -50px;
 }
 
 .gallery__heart {
     grid-area: 2 / 3 / 2 / 3;
     position: relative;
     max-width: 120px;
+    top: 25px;
+    left: -50px;
     z-index: 2;
 }
 
@@ -1167,8 +1161,6 @@ body {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 25px;
-    left: -40px;
 }
 
 .about-zooov__description {
@@ -1187,54 +1179,99 @@ body {
 .about-zooov__text {
     line-height: 130%;
 }
-/*хорошо до 1249*/
 
 /* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 1239px) {
-
+@media screen and (max-width: 1229px) {
+    .about-zooov__gallery {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
 }
 
-@media screen and (max-width: 768px) { /*разбить на 2 от 691*/
-    .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 719px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". about-zooov__content .";
-        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+@media screen and (max-width: 1199px) {
+.gallery__heart {
+    top: 65px;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .about-zooov__gallery {
+        padding-top: 10%;
+        padding-bottom: 10%;
     }
 
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 2fr;
+    .gallery__dog {
+        top: -60px;
+    }
+
+    .gallery__heart {
+        top: 80px;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+    .about-zooov__gallery {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .gallery__heart {
+        top: 90px;
+    }
+}
+
+@media screen and (max-width: 1096px) {
+    .about-zooov__gallery {
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+}
+
+@media screen and (max-width: 1075px) {
+    .about-zooov__gallery {
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .about-zooov__gallery {
+        padding-top: 25%;
+        padding-bottom: 25%;
+    }
+
+    .gallery__dog {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-rows: 1fr 2.5fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') bottom left/cover no-repeat, #FFF4F3;
         padding: 0px;
-        margin-bottom: 40px;
     }
 
     .about-zooov__gallery {
         grid-area: about-zooov__gallery;
         display: grid;
-        grid-template-columns: minmax(auto, 329px) minmax(auto, 416px) minmax(auto, 216px);
+        grid-template-columns: minmax(auto, 335px) minmax(auto, 420px) minmax(auto, 220px);
+        padding: 0px 0px 53px 0px;
     }
 
-    .gallery__dog img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 30px;
-        left: -50px;
+    .gallery__dog {
+        padding-left: 0px;
+        top: -80px;
     }
 
-    .gallery__heart img {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: -25px;
-        left: -40px;
+    .gallery__heart {
+        left: -70px;
+        top: 150px;
     }
 
     .about-zooov__description {
@@ -1252,131 +1289,139 @@ body {
     }
 }
 
-@media screen and (max-width: 929px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
+@media screen and (max-width: 960px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
+    }
+
+    .gallery__dog {
+        top: 0px;
+    }
+
+    .gallery__heart {
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 909px) {
+    .gallery__dog {
+        top: -40px;
+    }
+
+    .gallery__heart {
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.8fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
+    }
+
+    .gallery__heart {
+        top: 30px;
     }
 }
 
-@media screen and (max-width: 890px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
+@media screen and (max-width: 823px) {
+    .gallery__dog {
+        top: -120px;
+    }
+
+    .gallery__heart {
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 781px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
         grid-template-rows: 1fr 1.6fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
     }
 
-    .gallery__dog img {
-        top: 0px;
-        left: -50px;
-    }
-}
-
-@media screen and (max-width: 819px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1.5fr;
-        grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
-    }
-
-    .gallery__dog img {
-        top: -50px;
-        left: -50px;
+    .gallery__heart {
+        top: 40px;
     }
 }
 
-@media screen and (max-width: 754px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1.4fr;
+@media screen and (max-width: 700px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-rows: 1fr 1.3fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
     }
 
-    .gallery__dog img {
-        top: -100px;
-        left: -50px;
+    .gallery__heart {
+        top: -20px;
     }
 }
 
-@media screen and (max-width: 699px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1.2fr;
+@media screen and (max-width: 623px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-rows: 1fr 1.1fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
-    }
-
-    .gallery__dog img {
-        top: -120px;
-        left: -50px;
-    }
-}
-
-@media screen and (max-width: 615px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
     }
 }
 
 @media screen and (max-width: 563px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 0.7fr;
-        grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
-    }
-
-    .gallery__dog img {
-        top: 40px;
-        left: -40px;
+    .about-zooov__gallery {
+        padding: 0px;
     }
 }
 
-@media screen and (max-width: 499px) {
-    .about-zooov__content {
-        grid-area: about-zooov__content;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 0.62fr;
+@media screen and (max-width: 578px) {
+    .about-zooov {
+        display:grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-rows: 1fr 0.9fr;
         grid-template-areas:
-            "about-zooov__description"
-            "about-zooov__gallery";
+        ". about-zooov__description ."
+        ". about-zooov__gallery .";
+        background: url('../img/about-us/about-us-waves-mobile.png') 100% 50%/cover auto no-repeat, #FFF4F3;
+        padding: 0px;
     }
 
-    .gallery__dog img {
-        top: 40px;
-        left: -40px;
+
+    .gallery__dog {
+        top: -100px;
+    }
+
+    .gallery__heart {
+        top: -40px;
     }
 }
+
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
 /* - Позиционирование -------------------------------------- */
