@@ -98,6 +98,8 @@ body {
 .button_color-pink {
     background: rgba(255, 255, 255, 0.2);
     color: #FFFFFF;
+    padding-left: 12px;
+    justify-content: left;
 }
 
 .button_color-pink:hover {
@@ -348,21 +350,18 @@ body {
 }
 
 .intro,
+.diet-compo,
 .diet-calc,
 .why-zooov,
 .about-zooov,
 .delivery,
 .faq {
-    margin-bottom: 180px;
+    margin-bottom: 160px;
 }
 
 .barf,
 .diets {
     margin-bottom: 80px;
-}
-
-.diet-compo {
-    margin-bottom: 200px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -744,6 +743,10 @@ body {
     .slick-arrow.slick-next {
         right: 0;
         background: url('../img/diet-compo/right-red-arrow.svg') 0 0 / 100% no-repeat;
+    }
+
+    .slick-arrow.slick-disabled {
+        opacity: 0.3;
     }
 
     .slick-dots {
@@ -1253,7 +1256,7 @@ body {
         grid-template-areas:
         ". about-zooov__description ."
         ". about-zooov__gallery .";
-        background: url('../img/about-us/about-us-waves-mobile.png') bottom right/contain no-repeat, #FFF4F3;
+        background: url('../img/about-us/about-us-waves-mobile.png') right 105%/auto auto no-repeat, #FFF4F3;
         padding: 0px;
     }
 
@@ -1354,9 +1357,35 @@ body {
     }
 }
 
+@media screen and (max-width: 675px) {
+    .gallery__heart {
+        top: 10px;
+    }
+}
+
 @media screen and (max-width: 623px) {
     .about-zooov {
         grid-template-rows: 1fr 1.1fr;
+    }
+
+    .gallery__heart {
+        top: -40px;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .about-zooov {
+        grid-template-rows: 1fr 0.9fr;
+        background: url('../img/about-us/about-us-waves-mobile.png') right 107%/auto auto no-repeat, #FFF4F3;
+    }
+
+
+    .gallery__dog {
+        top: -100px;
+    }
+
+    .gallery__heart {
+        top: -60px;
     }
 }
 
@@ -1366,18 +1395,29 @@ body {
     }
 }
 
-@media screen and (max-width: 578px) {
+
+@media screen and (max-width: 548px) {
+    .gallery__dog {
+        top: -100px;
+    }
+
+    .gallery__heart {
+        top: -15px;
+    }
+}
+
+@media screen and (max-width: 515px) {
     .about-zooov {
         grid-template-rows: 1fr 0.9fr;
     }
 
 
     .gallery__dog {
-        top: -100px;
+        top: -150px;
     }
 
     .gallery__heart {
-        top: -40px;
+        top: 20px;
     }
 }
 
@@ -1546,11 +1586,21 @@ body {
     grid-template-columns: minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
     grid-template-areas:
         ". contacts__how-to contacts__pictures_dog-meat contacts__form contacts__pictures_apple .";
-    background: url(../img/contacts/contacts-wave-left.png) 24px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% -63px no-repeat, #961914;
+    background: url(../img/contacts/contacts-wave-left.png) 0px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% -63px no-repeat, #961914;
 }
 
 .contacts__how-to {
     grid-area: contacts__how-to;
+}
+
+.contacts__button {
+    display: block;
+    max-width: 274px;
+}
+
+.contacts__logo {
+    padding-right: 8px;
+    width: 24px;
 }
 
 .contacts__pictures_dog-meat {

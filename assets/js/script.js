@@ -18,6 +18,7 @@ $(document).ready(function() {
     arrows:true,
     dots:true,
     centerMode:true,
+    infinite:false
   });
 });
 
