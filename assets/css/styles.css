@@ -1585,8 +1585,8 @@ body {
     display: grid;
     grid-template-columns: minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
     grid-template-areas:
-        ". contacts__how-to contacts__pictures_dog-meat contacts__form contacts__pictures_apple .";
-    background: url(../img/contacts/contacts-wave-left.png) 0px 150px no-repeat, url(../img/contacts/contacts-wave-right.png) 100% -63px no-repeat, #961914;
+        ". contacts__how-to . contacts__form . .";
+    background: url(../img/contacts/contacts-wave-left.png) 0 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 103% -63px no-repeat, url(../img/contacts/contacts-dog.png) 37% 20%/110px no-repeat, url(../img/contacts/contacts-meat.png) 34% 60%/134px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat,#961914;
 }
 
 .contacts__how-to {
@@ -1601,35 +1601,6 @@ body {
 .contacts__logo {
     padding-right: 8px;
     width: 24px;
-}
-
-.contacts__pictures_dog-meat {
-    grid-area: contacts__pictures_dog-meat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.contacts__pictures_apple {
-    grid-area: contacts__pictures_apple;
-}
-
-.contacts__apple {
-    position: relative;
-}
-
-.contacts__apple img {
-    width: 100px;
-    position: absolute;
-    top: 450px;
-}
-
-.contacts__dog img {
-    width: 70%;
-}
-
-.contact__apple img {
-    width: 60px;
 }
 
 .contacts__form {
@@ -1755,6 +1726,59 @@ body {
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 13px;
+}
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1290px) {
+    .contacts {
+background: url(../img/contacts/contacts-wave-left.png) -4% 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 107% -47% no-repeat, url(../img/contacts/contacts-dog.png) 37% 20%/110px no-repeat, url(../img/contacts/contacts-meat.png) 34% 60%/134px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat,#961914;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .contacts {
+        grid-area: contacts;
+        display: grid;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+        grid-template-areas:
+            ". contacts__how-to ."
+            ". contacts__form .";
+        background: url(../img/contacts/contacts-mobile-wave-top.png) 100% -129px no-repeat, url(../img/contacts/contacts-mobile-wave-bottom.png) 100% 110% no-repeat, #961914;
+    }
+
+    .contacts__subtitle, .contacts__minisubtitle {
+        margin-top: 56px;
+    }
+
+    .contacts__insta {
+        margin-bottom: 0px;
+    }
+
+    .inputs__name-mail, .contact-form__privacy-button  {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .inputs__name, .inputs__mail {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .inputs__name, .inputs__mail, .inputs__question {
+        margin-bottom: 16px;
+    }
+
+    .contact-form__privacy {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 33px;
+    }
+
+    .contact-form__privacy-button {
+        margin-bottom: 242px;
+    }
 }
 
 /* = FOOTER =================================================== */
