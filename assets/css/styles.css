@@ -1178,6 +1178,10 @@ body {
     line-height: 130%;
 }
 
+.about-zooov__mobile-gallery {
+    display:none;
+}
+
 /* - Типографика ------------------------------------------- */
 .about-zooov__text {
     line-height: 130%;
@@ -1251,22 +1255,35 @@ body {
 @media screen and (max-width: 1005px) {
     .about-zooov {
         display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
-        grid-template-rows: 1fr 2.5fr;
+        grid-template-columns: minmax(24px, 1fr) minmax(auto, 957px) minmax(24px, 1fr);
         grid-template-areas:
         ". about-zooov__description ."
-        ". about-zooov__gallery .";
+        "about-zooov__mobile-gallery about-zooov__mobile-gallery about-zooov__mobile-gallery";
         background: url('../img/about-us/about-us-waves-mobile.png') right 105%/auto auto no-repeat, #FFF4F3;
         padding: 0px;
     }
 
-    .about-zooov__gallery {
-        grid-area: about-zooov__gallery;
+    .about-zooov__description {
+        grid-area: about-zooov__description;
+        margin: 0px;
+    }
+
+    .about-zooov__mobile-gallery {
+        grid-area: about-zooov__mobile-gallery;
         display: grid;
-        grid-template-columns: minmax(auto, 335px) minmax(auto, 420px) minmax(auto, 220px);
         padding: 0px 0px 53px 0px;
     }
 
+    .about-zooov__mobile-gallery img {
+        width:100%;
+    }
+
+    .about-zooov__gallery {
+        display:none;
+    }
+}
+
+    /*
     .gallery__dog {
         padding-left: 0px;
         top: -80px;
@@ -1437,7 +1454,7 @@ body {
     .about-zooov {
         grid-template-rows: 1fr 0.59fr;
     }
-}
+}*/
 
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
