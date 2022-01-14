@@ -1585,8 +1585,8 @@ body {
     display: grid;
     grid-template-columns: minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
     grid-template-areas:
-        ". contacts__how-to . contacts__form . .";
-    background: url(../img/contacts/contacts-wave-left.png) 0 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 103% -63px no-repeat, url(../img/contacts/contacts-dog.png) 37% 20%/110px no-repeat, url(../img/contacts/contacts-meat.png) 34% 60%/134px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat,#961914;
+        ". contacts__how-to contacts__dog-meat contacts__form contacts__apple .";
+    background: url(../img/contacts/contacts-wave-left.png) 0 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 103% -63px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat, #961914;
 }
 
 .contacts__how-to {
@@ -1601,6 +1601,31 @@ body {
 .contacts__logo {
     padding-right: 8px;
     width: 24px;
+}
+
+.contacts__dog-meat {
+    grid-area: contacts__dog-meat;
+}
+
+.dog-icon {
+    max-width: 110px;
+    position: relative;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+.meat-icon {
+    max-width: 134px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.dog-icon img {
+    width:100%;
+}
+
+.meat-icon img {
+    width: 100%;
 }
 
 .contacts__form {
@@ -1728,11 +1753,6 @@ body {
     padding-left: 13px;
 }
 /* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 1290px) {
-    .contacts {
-background: url(../img/contacts/contacts-wave-left.png) -4% 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 107% -47% no-repeat, url(../img/contacts/contacts-dog.png) 37% 20%/110px no-repeat, url(../img/contacts/contacts-meat.png) 34% 60%/134px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat,#961914;
-    }
-}
 
 @media screen and (max-width: 1023px) {
     .contacts {
@@ -1742,7 +1762,15 @@ background: url(../img/contacts/contacts-wave-left.png) -4% 100% no-repeat, url(
         grid-template-areas:
             ". contacts__how-to ."
             ". contacts__form .";
-        background: url(../img/contacts/contacts-mobile-wave-top.png) 100% -129px no-repeat, url(../img/contacts/contacts-mobile-wave-bottom.png) 100% 110% no-repeat, #961914;
+        background: url(../img/contacts/contacts-mobile-wave-top.png) 100% -129px no-repeat, url(../img/contacts/contacts-mobile-wave-bottom.png) 100% 110% no-repeat, url(../img/contacts/contacts-dog.png) 100% 12%/110px no-repeat, url(../img/contacts/contacts-meat.png) 100% 40%/134px no-repeat, url(../img/contacts/contacts-apple.png) 15% 95%/104px no-repeat,#961914;
+    }
+
+    .contacts__dog-meat{
+        display: none;
+    }
+
+    .contacts__form .text{
+        margin-right: 134px;
     }
 
     .contacts__subtitle, .contacts__minisubtitle {
