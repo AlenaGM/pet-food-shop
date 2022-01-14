@@ -1421,6 +1421,24 @@ body {
     }
 }
 
+@media screen and (max-width: 499px) {
+    .about-zooov {
+        grid-template-rows: 1fr 0.75fr;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .about-zooov {
+        grid-template-rows: 1fr 0.61fr;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .about-zooov {
+        grid-template-rows: 1fr 0.59fr;
+    }
+}
+
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
 /* - Позиционирование -------------------------------------- */
