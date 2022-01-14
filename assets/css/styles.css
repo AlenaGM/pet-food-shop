@@ -1786,11 +1786,33 @@ body {
     letter-spacing: 0em;
     text-align: left;
     color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+.footer__content div {
     padding-top: 30px;
     padding-bottom: 30px;
-    text-decoration: none;
 }
 
 .footer__content div:not(:last-of-type) {
     padding-right: 10px;
+}
+
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 1023px) {
+    .footer__content {
+        grid-area: footer__content;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .footer__content div {
+        padding: 8px 0px 0px 0px;
+    }
+
+    .footer__content div:not(:last-of-type) {
+        padding: 24px 0px 0px 0px;
+    }
 }
