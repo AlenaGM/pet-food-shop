@@ -1072,24 +1072,20 @@ body {
     margin-bottom: 22px;
 }
 
-@media screen and (max-width: 574px ) {
-    .why-zooov {
-        display: grid;
-        background: url('../img/common/long-wave-forwhitebg.png') 0px 20%/contain no-repeat, url('../img/common/long-wave-forwhitebg.png') 0px 80%/contain no-repeat;
-    }
-}
-
-/* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 767px) {
-    .why-zooov {
-        margin-bottom: 80px;
-    }
-}
-
 /* - Типографика ------------------------------------------- */
 .why-zooov__minisubtitle {
     padding-top: 0px;
     padding-bottom: 8px;
+}
+
+
+/* - Медиазапросы ------------------------------------------ */
+@media screen and (max-width: 851px) {
+    .why-zooov {
+        display: grid;
+        background: url('../img/common/long-wave-forwhitebg.png') 0px 20%/contain no-repeat, url('../img/common/long-wave-forwhitebg.png') 0px 80%/contain no-repeat;
+        margin-bottom: 80px;
+    }
 }
 
 /* = ABOUT ZOOOV: FROM ZOOOV WITH CARE AND LOVE =============== */
@@ -1329,12 +1325,12 @@ body {
     padding-top: 10px;
 }
 
-/* - Типографика ------------------------------------------- */
-.image__heart {
+.image-heart {
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
+/* - Типографика ------------------------------------------- */
 .delivery__subtitle {
     padding-bottom: 60px;
 }
@@ -1412,12 +1408,12 @@ body {
     display: none;
 }
 
-/* - Типографика ------------------------------------------- */
 .spoiler__item:not(:last-of-type) {
     border-bottom: solid 1px #E5E5E5;
     padding-bottom: 24px;
 }
 
+/* - Типографика ------------------------------------------- */
 .spoiler__minisubtitle {
     line-height: 140%;
     padding: 24px 44px 0px 0px;
@@ -1725,7 +1721,6 @@ body {
 .footer__content div:not(:last-of-type) {
     padding-right: 10px;
 }
-
 
 /* - Медиазапросы ------------------------------------------ */
 @media screen and (max-width: 1023px) {
