@@ -1176,7 +1176,7 @@ body {
     line-height: 130%;
 }
 
-.about-zooov__mobile-gallery {
+.about-zooov__gallery_mobile {
     display:none;
 }
 
@@ -1256,7 +1256,7 @@ body {
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 957px) minmax(24px, 1fr);
         grid-template-areas:
         ". about-zooov__description ."
-        "about-zooov__mobile-gallery about-zooov__mobile-gallery about-zooov__mobile-gallery";
+        "about-zooov__gallery_mobile about-zooov__gallery_mobile about-zooov__gallery_mobile";
         background: url('../img/about-us/about-us-waves-mobile.png') right 105%/auto auto no-repeat, #FFF4F3;
         padding: 0px;
     }
@@ -1270,13 +1270,13 @@ body {
         margin-bottom: 24px;
     }
 
-    .about-zooov__mobile-gallery {
-        grid-area: about-zooov__mobile-gallery;
+    .about-zooov__gallery_mobile {
+        grid-area: about-zooov__gallery_mobile;
         display: grid;
         padding: 0px 0px 53px 0px;
     }
 
-    .about-zooov__mobile-gallery img {
+    .about-zooov__gallery_mobile img {
         width:100%;
     }
 
@@ -1344,7 +1344,7 @@ body {
     padding-bottom: 8px;
 }
 
-.cue {
+.delivery__cue {
     color: #8B1A12;
     text-decoration: none;
 }
