@@ -365,7 +365,6 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-
     .intro,
     .diet-calc,
     .why-zooov,
@@ -452,6 +451,7 @@ body {
         grid-template-areas:
             ". intro__content . .";
         margin-top: -80px;
+        background: url('../img/intro/zooov-stroke-small.jpg') 100% 95% no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
     }
 }
 
@@ -460,7 +460,6 @@ body {
         grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) 1fr minmax(24px, 1fr);
         grid-template-areas:
             ". intro__content . .";
-        background: url('../img/intro/zooov-stroke-small.jpg') 100% 95% no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
     }
 
     .intro__content {
@@ -791,7 +790,7 @@ body {
     .diet-compo__minisubtitle,
     .diet-compo__list_left,
     .diet-compo__list_right {
-        margin-left: 25%;
+        margin-left: 20%;
     }
 
     .diet-compo__list_left {
@@ -923,11 +922,8 @@ body {
         grid-template-columns: minmax(24px, 1fr) minmax(auto, 529px) minmax(24px, 1fr);
         grid-template-areas:
             ". diets__subtitle ."
+            ". diets__text ."
             "diets__slider diets__slider diets__slider";
-    }
-
-    .diets__text {
-        display: none;
     }
 
     .diets__items {
@@ -942,11 +938,12 @@ body {
     }
 
     .diets__subtitle {
-        padding-bottom: 40px;
+        padding-bottom: 0px;
     }
 
     .diets__text {
         margin: 16px 0px;
+        font-size: 14px;
     }
 
     .diets__item {
@@ -1027,6 +1024,7 @@ body {
         grid-area: diet-calc__text;
         padding-left: 32px 24px 24px 24px;
         text-align: center;
+        font-size: 20px;
     }
 
     .diet-calc__button {
@@ -1049,7 +1047,7 @@ body {
 .why-zooov__subtitle {
     grid-area: why-zooov__subtitle;
     margin-top: 0px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     display: grid;
     justify-self: start;
 }
@@ -1268,6 +1266,10 @@ body {
         margin: 0px;
     }
 
+    .about-zooov__subtitle {
+        margin-bottom: 24px;
+    }
+
     .about-zooov__mobile-gallery {
         grid-area: about-zooov__mobile-gallery;
         display: grid;
@@ -1282,180 +1284,6 @@ body {
         display:none;
     }
 }
-
-    /*
-    .gallery__dog {
-        padding-left: 0px;
-        top: -80px;
-    }
-
-    .gallery__heart {
-        left: -70px;
-        top: 150px;
-    }
-
-    .about-zooov__description {
-        grid-area: about-zooov__description;
-        margin: 0px;
-    }
-
-    .about-zooov__subtitle {
-        margin-top: 53px;
-        margin-bottom: 24px;
-    }
-
-    .about-zooov__text {
-        margin-bottom: 70px;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    .about-zooov {
-        grid-template-rows: 1fr 2fr;
-        padding: 0px;
-    }
-
-    .gallery__dog {
-        top: 0px;
-    }
-
-    .gallery__heart {
-        top: 20px;
-    }
-}
-
-@media screen and (max-width: 909px) {
-    .gallery__dog {
-        top: -40px;
-    }
-
-    .gallery__heart {
-        top: 70px;
-    }
-}
-
-@media screen and (max-width: 868px) {
-    .about-zooov {
-        grid-template-rows: 1fr 1.8fr;
-    }
-
-    .gallery__heart {
-        top: 30px;
-    }
-}
-
-@media screen and (max-width: 823px) {
-    .gallery__dog {
-        top: -120px;
-    }
-
-    .gallery__heart {
-        top: 70px;
-    }
-}
-
-@media screen and (max-width: 781px) {
-    .about-zooov {
-        grid-template-rows: 1fr 1.6fr;
-    }
-
-    .gallery__heart {
-        top: 40px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .about-zooov {
-        grid-template-rows: 1fr 1.3fr;
-    }
-
-    .gallery__heart {
-        top: -20px;
-    }
-}
-
-@media screen and (max-width: 675px) {
-    .gallery__heart {
-        top: 10px;
-    }
-}
-
-@media screen and (max-width: 623px) {
-    .about-zooov {
-        grid-template-rows: 1fr 1.1fr;
-    }
-
-    .gallery__heart {
-        top: -40px;
-    }
-}
-
-@media screen and (max-width: 578px) {
-    .about-zooov {
-        grid-template-rows: 1fr 0.9fr;
-        background: url('../img/about-us/about-us-waves-mobile.png') right 107%/auto auto no-repeat, #FFF4F3;
-    }
-
-
-    .gallery__dog {
-        top: -100px;
-    }
-
-    .gallery__heart {
-        top: -60px;
-    }
-}
-
-@media screen and (max-width: 563px) {
-    .about-zooov__gallery {
-        padding: 0px;
-    }
-}
-
-
-@media screen and (max-width: 548px) {
-    .gallery__dog {
-        top: -100px;
-    }
-
-    .gallery__heart {
-        top: -15px;
-    }
-}
-
-@media screen and (max-width: 515px) {
-    .about-zooov {
-        grid-template-rows: 1fr 0.9fr;
-    }
-
-
-    .gallery__dog {
-        top: -150px;
-    }
-
-    .gallery__heart {
-        top: 20px;
-    }
-}
-
-@media screen and (max-width: 499px) {
-    .about-zooov {
-        grid-template-rows: 1fr 0.75fr;
-    }
-}
-
-@media screen and (max-width: 398px) {
-    .about-zooov {
-        grid-template-rows: 1fr 0.61fr;
-    }
-}
-
-@media screen and (max-width: 345px) {
-    .about-zooov {
-        grid-template-rows: 1fr 0.59fr;
-    }
-}*/
-
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
 /* - Позиционирование -------------------------------------- */
@@ -1518,6 +1346,7 @@ body {
 
 .cue {
     color: #8B1A12;
+    text-decoration: none;
 }
 
 /* - Медиазапросы ------------------------------------------ */
@@ -1530,6 +1359,10 @@ body {
         background: url('../img/delivery/deliveryarrow-mobile.png') 0 63px/auto 90% no-repeat;
         padding-left: 24px;
     }
+
+    .delivery__subtitle {
+        padding-bottom: 40px;
+    }
 }
 
 /* = FAQ ====================================================== */
@@ -1540,7 +1373,6 @@ body {
     grid-template-columns: minmax(1rem, 1fr) minmax(auto, 348px) minmax(auto, 76px) minmax(auto, 776px) minmax(1rem, 1fr);
     grid-template-areas:
         ". faq__subtitle . faq__spoiler .";
-    margin-bottom: 180px;
 }
 
 .faq__subtitle {
@@ -1753,10 +1585,15 @@ body {
 }
 
 /* - Типографика ------------------------------------------- */
-.contacts__phone {
+.contacts__phone a{
     font-size: 16px;
     font-weight: 700;
     line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.contacts__insta a{
     color: #FFFFFF;
 }
 
@@ -1810,6 +1647,10 @@ body {
 
     .contacts__subtitle, .contacts__minisubtitle {
         margin-top: 56px;
+    }
+
+    .contacts__subtitle {
+        font-size: 40px;
     }
 
     .contacts__insta {
