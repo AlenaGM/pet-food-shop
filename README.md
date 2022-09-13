@@ -5,9 +5,11 @@ Online pet food shop. Personal project aimed to perfect my skills in building ad
 The project was made on 9th&10th weeks of code learning.
 
 ## Result
-<br>
-<img width="45%" alt="screen capture" src="../main/assets/img/capturefirstpage.jpg">
-
+<br><br>
+<img width="45%" alt="screen capture" src="../main/assets/img/captureweb.jpeg">
+<img width="45%" alt="screen capture" src="../main/assets/img/capturetablet.jpeg">
+<img width="45%" alt="screen capture" src="../main/assets/img/capturemobile.jpeg">
+<br><br>
 ## Demo
 [Zooov]
 
