@@ -1,352 +1,354 @@
-/* = КО ВСЕМУ ДОКУМЕНТУ ==================================== */
-/* - Позиционирование -------------------------------------- */
+/* = ALL WEBPAGE ==================================== */
+/* - Positioning ------------------------------------ */
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 .wrapper {
-    display: grid;
-    min-height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(80px, auto) 1fr minmax(76px, auto);
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
+  display: grid;
+  min-height: 100%;
+  min-width: 350px;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(80px, auto) 1fr minmax(76px, auto);
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------- */
 html,
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
 .subtitle {
-    font-family: 'Oswald', sans-serif;
-    font-size: 46px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 130%;
-    color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  color: #000000;
 }
 
 .minisubtitle {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 130%;
-    color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 130%;
+  color: #000000;
 }
 
 .text {
-    line-height: 140%;
-    letter-spacing: 0em;
-    color: #434242;
+  line-height: 140%;
+  letter-spacing: 0em;
+  color: #434242;
 }
 
 .text_color-white {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text_color-black {
-    color: #000000;
+  color: #000000;
 }
 
 @media screen and (max-width: 767px) {
-    .subtitle {
-        font-size: 40px;
-    }
+  .subtitle {
+    font-size: 40px;
+  }
 }
 
-/* - Оформление: ссылки, кнопки ---------------------------- */
+/* - Decoration: links, buttons ---------------------------- */
 .button {
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 42px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 140%;
-    letter-spacing: 0em;
-    text-align: center;
-    text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 42px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0em;
+  text-align: center;
+  text-decoration: none;
 }
 
 .button_color-red {
-    color: #FFFFFF;
-    background: #961914;
+  color: #ffffff;
+  background: #961914;
 }
 
 .button_color-red:hover {
-    background: #75110D;
+  background: #75110d;
 }
 
 .button_color-white {
-    color: #961914;
-    background: #FFFFFF;
-    border: solid 1px #961914;
+  color: #961914;
+  background: #ffffff;
+  border: solid 1px #961914;
 }
 
 .button_color-white:hover {
-    background: #EAD1D0;
-    border: none;
+  background: #ead1d0;
+  border: none;
 }
 
 .button_color-pink {
-    background: rgba(255, 255, 255, 0.2);
-    color: #FFFFFF;
-    padding-left: 12px;
-    justify-content: left;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding-left: 12px;
+  justify-content: left;
 }
 
 .button_color-pink:hover {
-    background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .button_color-peach {
-    background: #FFF4F3;
-    color: #EC7973;
-    text-decoration: none;
-    border: none;
+  background: #fff4f3;
+  color: #ec7973;
+  text-decoration: none;
+  border: none;
 }
 
 .button_color-peach:hover {
-    background: #EAD1D0;
-    color: #961914;
+  background: #ead1d0;
+  color: #961914;
 }
 
 /* = HEADER ================================================ */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ------------------------------------------- */
 .header {
-    grid-area: header;
-    display: grid;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". header__container .";
+  grid-area: header;
+  display: grid;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(
+      24px,
+      1fr
+    );
+  grid-template-areas: ". header__container .";
 }
 
 .header::before {
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .header__container {
-    grid-area: header__container;
-    display: grid;
-    min-height: 80px;
-    align-items: center;
-    padding-top: 16px;
-    grid-template-columns: minmax(auto, 80px) minmax(auto, 1120px);
-    grid-template-areas:
-        "header__logo header__menu";
+  grid-area: header__container;
+  display: grid;
+  min-height: 80px;
+  align-items: center;
+  padding-top: 16px;
+  grid-template-columns: minmax(auto, 80px) minmax(auto, 1120px);
+  grid-template-areas: "header__logo header__menu";
 }
 
 .header__logo {
-    grid-area: header__logo;
-    position: relative;
-    z-index: 3;
+  grid-area: header__logo;
+  position: relative;
+  z-index: 3;
 }
 
 .header__img {
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .header__burger {
-    display: none;
+  display: none;
 }
 
 .header__menu {
-    grid-area: header__menu;
-    justify-self: right;
+  grid-area: header__menu;
+  justify-self: right;
 }
 
 .menu__list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    position: relative;
-    padding-inline-start: 0px;
-    z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  position: relative;
+  padding-inline-start: 0px;
+  z-index: 3;
 }
 
 .menu__list li:not(:last-of-type) {
-    margin-right: 53px;
+  margin-right: 53px;
 }
 
 .header__button {
-    display: none;
+  display: none;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .menu__link {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 140%;
-    text-align: center;
-    text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  text-align: center;
+  text-decoration: none;
 }
 
 .menu__link:hover {
-    text-decoration: underline 3px #961914;
+  text-decoration: underline 3px #961914;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1023px) {
-    body.lock {
-        overflow: hidden;
-    }
+  body.lock {
+    overflow: hidden;
+  }
 
-    .header.active {
-        position: fixed;
-    }
+  .header.active {
+    position: fixed;
+  }
 
-    .header__container {
-        grid-area: header__container;
-        display: grid;
-        min-height: 60px;
-        width: 100%;
-        align-items: center;
-        padding-top: 16px;
-        grid-template-columns: minmax(auto, 60px) minmax(auto, 915px);
-        grid-template-areas:
-            "header__logo header__burger";
-    }
+  .header__container {
+    grid-area: header__container;
+    display: grid;
+    min-height: 60px;
+    width: 100%;
+    align-items: center;
+    padding-top: 16px;
+    grid-template-columns: minmax(auto, 60px) minmax(auto, 915px);
+    grid-template-areas: "header__logo header__burger";
+  }
 
-    .header__burger {
-        grid-area: header__burger;
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        z-index: 3;
-        justify-self: right;
-    }
+  .header__burger {
+    grid-area: header__burger;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    justify-self: right;
+  }
 
-    .header__burger::before,
-    .header__burger::after {
-        content: '';
-        background-color: #FFFFFF;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        transition: all 0.3s ease 0s;
-    }
+  .header__burger::before,
+  .header__burger::after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
 
-    .header__burger::before {
-        top: 0;
-    }
+  .header__burger::before {
+    top: 0;
+  }
 
-    .header__burger::after {
-        bottom: 0;
-    }
+  .header__burger::after {
+    bottom: 0;
+  }
 
-    .header__burger.active::before {
-        transform: rotate(45deg);
-        top: 9px;
-        background-color: #000000;
-    }
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+    background-color: #000000;
+  }
 
-    .header__burger.active::after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        background-color: #000000;
-    }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    background-color: #000000;
+  }
 
-    .header__burger span {
-        position: absolute;
-        background-color: #FFFFFF;
-        width: 100%;
-        height: 2px;
-        left: 0;
-        top: 9px;
-        transition: all 0.3s ease 0s;
-    }
+  .header__burger span {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
 
-    .header__burger.active span {
-        transform: scale(0);
-    }
+  .header__burger.active span {
+    transform: scale(0);
+  }
 
-    .header__menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-        transition: all 0.3s ease 0s;
-        overflow: auto;
-        background: url(../img/intro/mobile-wave-left.png) 0 160px no-repeat, url(../img/intro/mobile-wave-right.png) 100% 340px no-repeat, #FFFFFF;
-        background-attachment: local;
-    }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    overflow: auto;
+    background: url(../img/intro/mobile-wave-left.png) 0 160px no-repeat,
+      url(../img/intro/mobile-wave-right.png) 100% 340px no-repeat, #ffffff;
+    background-attachment: local;
+  }
 
-    .header__menu.active {
-        top: 0;
-    }
+  .header__menu.active {
+    top: 0;
+  }
 
-    .menu__list {
-        display: block;
-        padding-top: 108px;
-    }
+  .menu__list {
+    display: block;
+    padding-top: 108px;
+  }
 
-    .menu__list li {
-        margin: 0px 0px 40px 0px;
-    }
+  .menu__list li {
+    margin: 0px 0px 40px 0px;
+  }
 
-    .menu__list li:not(:last-of-type) {
-        margin-right: 0px;
-    }
+  .menu__list li:not(:last-of-type) {
+    margin-right: 0px;
+  }
 
-    .menu__link {
-        color: #000000;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 140%;
-        text-align: center;
-    }
+  .menu__link {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+  }
 
-    .header__button {
-        display: block;
-        padding-top: 102px;
-        padding-bottom: 62px;
-    }
+  .header__button {
+    display: block;
+    padding-top: 102px;
+    padding-bottom: 62px;
+  }
 }
 
 /* = MAIN =================================================== */
 .main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "intro"
-        "barf"
-        "diet-compo"
-        "diets"
-        "diet-calc"
-        "why-zooov"
-        "about-zooov"
-        "delivery"
-        "faq"
-        "contacts";
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "intro"
+    "barf"
+    "diet-compo"
+    "diets"
+    "diet-calc"
+    "why-zooov"
+    "about-zooov"
+    "delivery"
+    "faq"
+    "contacts";
 }
 
 .intro,
@@ -356,1386 +358,1449 @@ body {
 .about-zooov,
 .delivery,
 .faq {
-    margin-bottom: 160px;
+  margin-bottom: 160px;
 }
 
 .barf,
 .diets {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 @media screen and (max-width: 1024px) {
-    .intro,
-    .diet-calc,
-    .why-zooov,
-    .about-zooov,
-    .delivery,
-    .faq {
-        margin-bottom: 80px;
-    }
+  .intro,
+  .diet-calc,
+  .why-zooov,
+  .about-zooov,
+  .delivery,
+  .faq {
+    margin-bottom: 80px;
+  }
 
-    .barf,
-    .diets {
-        margin-bottom: 60px;
-    }
+  .barf,
+  .diets {
+    margin-bottom: 60px;
+  }
 
-    .diet-compo {
-        margin-bottom: 100px;
-    }
+  .diet-compo {
+    margin-bottom: 100px;
+  }
 
-    .why-zooov {
-        margin-bottom: 133px;
-    }
+  .why-zooov {
+    margin-bottom: 133px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
-    .barf {
-        margin-bottom: 0px;
-    }
+  .barf {
+    margin-bottom: 0px;
+  }
 }
 
 /* = INTRODUCTION =========================================== */
-/* - Позиционирование --------------------------------------- */
+/* - Positioning -------------------------------------------- */
 .intro {
-    display: grid;
-    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) minmax(auto, 790px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". intro__content . .";
-    min-height: 100vh;
-    margin-top: -96px;
-    background: url('../img/intro/zooov-stroke.jpg') 100% 60% no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
+  display: grid;
+  grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) minmax(auto, 790px) minmax(
+      24px,
+      1fr
+    );
+  grid-template-areas: ". intro__content . .";
+  min-height: 100vh;
+  margin-top: -96px;
+  background: url("../img/intro/zooov-stroke.jpg") 100% 60% no-repeat,
+    url("../img/intro/intro-bg.jpg") 50% / cover no-repeat;
 }
 
 .intro__content {
-    grid-area: intro__content;
-    z-index: 2;
-    align-self: center;
-    margin-top: 226px;
-    margin-bottom: 225px;
+  grid-area: intro__content;
+  z-index: 2;
+  align-self: center;
+  margin-top: 226px;
+  margin-bottom: 225px;
 }
 
 .intro__title {
-    margin: 0px 0px 10px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .intro__text {
-    max-width: 370px;
-    margin: 0px 0px 25px 0px;
+  max-width: 370px;
+  margin: 0px 0px 25px 0px;
 }
 
 .intro__button {
-    display: inline-flex;
+  display: inline-flex;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .intro__title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 54px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 130%;
-    color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  color: #ffffff;
 }
 
 .intro__text {
-    font-size: 20px;
-    line-height: 140%;
-    color: #FFFFFF;
-    padding-right: 60px;
+  font-size: 20px;
+  line-height: 140%;
+  color: #ffffff;
+  padding-right: 60px;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1023px) {
-    .intro {
-        grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) minmax(auto, 565px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". intro__content . .";
-        margin-top: -80px;
-        background: url('../img/intro/zooov-stroke-small.jpg') 100% 95% no-repeat, url('../img/intro/intro-bg.jpg') 50%/cover no-repeat;
-    }
+  .intro {
+    grid-template:
+      1fr / minmax(24px, 1fr) minmax(auto, 410px) minmax(auto, 565px)
+      minmax(24px, 1fr);
+    grid-template-areas: ". intro__content . .";
+    margin-top: -80px;
+    background: url("../img/intro/zooov-stroke-small.jpg") 100% 95% no-repeat,
+      url("../img/intro/intro-bg.jpg") 50% / cover no-repeat;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .intro {
-        grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) 1fr minmax(24px, 1fr);
-        grid-template-areas:
-            ". intro__content . .";
-    }
+  .intro {
+    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 410px) 1fr minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas: ". intro__content . .";
+  }
 
-    .intro__content {
-        margin-top: 207px;
-        margin-bottom: 173px;
-    }
+  .intro__content {
+    margin-top: 207px;
+    margin-bottom: 173px;
+  }
 
-    .intro__title {
-        margin: 0px 0px 24px 0px;
-        font-size: 44px;
-    }
+  .intro__title {
+    margin: 0px 0px 24px 0px;
+    font-size: 44px;
+  }
 
-    .intro__text {
-        margin: 0px 0px 48px 0px;
-        font-size: 18px;
-        padding-right: 130px;
-    }
+  .intro__text {
+    margin: 0px 0px 48px 0px;
+    font-size: 18px;
+    padding-right: 130px;
+  }
 }
 
 /* = WHAT IS BARF ============================================ */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning --------------------------------------------- */
 .barf {
-    display: grid;
-    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 612px) minmax(auto, 588px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". barf__content barf__image .";
-    justify-content: space-between;
+  display: grid;
+  grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 612px) minmax(auto, 588px) minmax(
+      24px,
+      1fr
+    );
+  grid-template-areas: ". barf__content barf__image .";
+  justify-content: space-between;
 }
 
 .barf__content {
-    grid-area: barf__content;
-    box-sizing: border-box;
-    margin-right: 10px;
+  grid-area: barf__content;
+  box-sizing: border-box;
+  margin-right: 10px;
 }
 
 .barf__image {
-    grid-area: barf__image;
+  grid-area: barf__image;
 }
 
 .barf__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .barf__subtitle {
-    padding-top: 55px;
-    padding-bottom: 16px;
+  padding-top: 55px;
+  padding-bottom: 16px;
 }
 
 .barf__minisubtitle {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .bulleted-list {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .bulleted-list li {
-    padding-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .bulleted-list li {
-    list-style: none;
+  list-style: none;
 }
 
 .bulleted-list li::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #961914;
-    display: inline-block;
-    margin: 0px 6px 2px 0px;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #961914;
+  display: inline-block;
+  margin: 0px 6px 2px 0px;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1023px) {
-    .barf {
-        display: grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". barf__content ."
-            ". barf__image .";
-        justify-content: space-between;
-    }
+  .barf {
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". barf__content ."
+      ". barf__image .";
+    justify-content: space-between;
+  }
 
-    .barf__content {
-        margin-bottom: 24px;
-    }
+  .barf__content {
+    margin-bottom: 24px;
+  }
 
-    .barf__subtitle {
-        padding-top: 0px;
-        padding-bottom: 8px;
-    }
+  .barf__subtitle {
+    padding-top: 0px;
+    padding-bottom: 8px;
+  }
 
-    .barf__text {
-        line-height: 150%;
-    }
+  .barf__text {
+    line-height: 150%;
+  }
 }
 
 /* = DIET COMPOSITION ========================================= */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .diet-compo {
-    display: grid;
-    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". diet-compo__content .";
+  display: grid;
+  grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
+  grid-template-areas: ". diet-compo__content .";
 }
 
 .diet-compo__slider {
-    display: none;
+  display: none;
 }
 
 .diet-compo__content {
-    grid-area: diet-compo__content;
-    display: grid;
-    background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas:
-        "diet-compo__adult-dogs diet-compo__puppets";
+  grid-area: diet-compo__content;
+  display: grid;
+  background: url("../img/common/long-wave-forpinkbg.png") 0px center no-repeat,
+    #ead1d0;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "diet-compo__adult-dogs diet-compo__puppets";
 }
 
 .diet-compo__adult-dogs {
-    grid-area: diet-compo__adult-dogs;
+  grid-area: diet-compo__adult-dogs;
 }
 
 .diet-compo__puppets {
-    grid-area: diet-compo__puppets;
+  grid-area: diet-compo__puppets;
 }
 
 .diet-compo__section {
-    display: grid;
-    margin: 0px 16px;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-areas:
-        "diet-compo__minisubtitle diet-compo__minisubtitle"
-        "diet-compo__list_left diet-compo__list_right";
+  display: grid;
+  margin: 0px 16px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas:
+    "diet-compo__minisubtitle diet-compo__minisubtitle"
+    "diet-compo__list_left diet-compo__list_right";
 }
 
 .diet-compo__minisubtitle {
-    grid-area: diet-compo__minisubtitle;
+  grid-area: diet-compo__minisubtitle;
 }
 
 .diet-compo__list_left {
-    grid-area: diet-compo__list_left;
+  grid-area: diet-compo__list_left;
 }
 
 .diet-compo__list_right {
-    grid-area: diet-compo__list_right;
+  grid-area: diet-compo__list_right;
 }
 
 .diet-compo__minisubtitle {
-    margin: 32px auto 0px 7.5%;
+  margin: 32px auto 0px 7.5%;
 }
 
 .diet-compo__list_left {
-    margin-left: 15%;
+  margin-left: 15%;
 }
 
 .compo__item_meat::before {
-    content: url('../img/diet-compo/meat.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/meat.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_bones::before {
-    content: url('../img/diet-compo/bones.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/bones.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_vegetables::before {
-    content: url('../img/diet-compo/vegetables.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/vegetables.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_liver::before {
-    content: url('../img/diet-compo/liver.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/liver.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_by-products::before {
-    content: url('../img/diet-compo/by-products.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/by-products.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_grains::before {
-    content: url('../img/diet-compo/grains.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/grains.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
 .compo__item_fruits::before {
-    content: url('../img/diet-compo/fruits.svg');
-    width: 20px;
-    display: inline-block;
-    margin: 0px 16px 0px 0px;
+  content: url("../img/diet-compo/fruits.svg");
+  width: 20px;
+  display: inline-block;
+  margin: 0px 16px 0px 0px;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .diet-compo__minisubtitle {
-    font-size: 14px;
-    line-height: 200%;
-    text-transform: uppercase;
+  font-size: 14px;
+  line-height: 200%;
+  text-transform: uppercase;
 }
 
 .diet-compo__list_left,
 .diet-compo__list_right {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .diet-compo__list_left li,
 .diet-compo__list_right li {
-    list-style-type: none;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 250%;
-    color: #434242;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 250%;
+  color: #434242;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1023px) {
-    .diet-compo {
-        display: grid;
-        grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". diet-compo__slider .";
-    }
+  .diet-compo {
+    display: grid;
+    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
+    grid-template-areas: ". diet-compo__slider .";
+  }
 
-    .diet-compo__content {
-        display: none;
-    }
+  .diet-compo__content {
+    display: none;
+  }
 
-    .diet-compo__slider {
-        grid-area: diet-compo__slider;
-        background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
-        display: grid;
-    }
+  .diet-compo__slider {
+    grid-area: diet-compo__slider;
+    background: url("../img/common/long-wave-forpinkbg.png") 0px center
+        no-repeat,
+      #ead1d0;
+    display: grid;
+  }
 
-    .slick-list {
-        overflow: hidden;
-    }
+  .slick-list {
+    overflow: hidden;
+  }
 
-    .slick-track {
-        display: flex;
-    }
+  .slick-track {
+    display: flex;
+  }
 
-    .slider {
-        position: relative;
-        padding: 0px;
-    }
+  .slider {
+    position: relative;
+    padding: 0px;
+  }
 
-    .slick-arrow {
-        position: absolute;
-        top: 40%;
-        margin: 30px 9px 0px 9px;
-        z-index: 10;
-        font-size: 0;
-        width: 30px;
-        height: 60px;
-        border: none;
-    }
+  .slick-arrow {
+    position: absolute;
+    top: 40%;
+    margin: 30px 9px 0px 9px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+    border: none;
+  }
 
-    .slick-arrow.slick-prev {
-        left: 0;
-        background: url('../img/diet-compo/left-red-arrow.svg') 0 0 / 100% no-repeat;
-    }
+  .slick-arrow.slick-prev {
+    left: 0;
+    background: url("../img/diet-compo/left-red-arrow.svg") 0 0 / 100% no-repeat;
+  }
 
-    .slick-arrow.slick-next {
-        right: 0;
-        background: url('../img/diet-compo/right-red-arrow.svg') 0 0 / 100% no-repeat;
-    }
+  .slick-arrow.slick-next {
+    right: 0;
+    background: url("../img/diet-compo/right-red-arrow.svg") 0 0 / 100%
+      no-repeat;
+  }
 
-    .slick-arrow.slick-disabled {
-        opacity: 0.3;
-    }
+  .slick-arrow.slick-disabled {
+    opacity: 0.3;
+  }
 
-    .slick-dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style-type: none;
-        padding-inline-start: 0px;
-    }
+  .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0px;
+  }
 
-    .slider.slick-dots li {
-        list-style: none;
-        margin: 0px 10px;
-    }
+  .slider.slick-dots li {
+    list-style: none;
+    margin: 0px 10px;
+  }
 
-    .slick-dots button {
-        font-size: 0;
-        width: 10px;
-        height: 10px;
-        background-color: transparent;
-        border: 1px solid #8B1A12;
-        border-radius: 50%;
-        padding: 4px;
-        margin: 35px 4px 4px 4px;
-    }
+  .slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid #8b1a12;
+    border-radius: 50%;
+    padding: 4px;
+    margin: 35px 4px 4px 4px;
+  }
 
-    .slick-dots li.slick-active button {
-        background-color: #8B1A12;
-    }
+  .slick-dots li.slick-active button {
+    background-color: #8b1a12;
+  }
 }
 
 @media screen and (max-width: 618px) {
-    .diet-compo__section {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "diet-compo__minisubtitle"
-            "diet-compo__list_left"
-            "diet-compo__list_right";
-    }
+  .diet-compo__section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "diet-compo__minisubtitle"
+      "diet-compo__list_left"
+      "diet-compo__list_right";
+  }
 
-    .diet-compo__minisubtitle,
-    .diet-compo__list_left,
-    .diet-compo__list_right {
-        margin-left: 20%;
-    }
+  .diet-compo__minisubtitle,
+  .diet-compo__list_left,
+  .diet-compo__list_right {
+    margin-left: 20%;
+  }
 
-    .diet-compo__list_left {
-        margin-bottom: 0px;
-    }
+  .diet-compo__list_left {
+    margin-bottom: 0px;
+  }
 
-    .diet-compo__list_right {
-        margin-top: 0px;
-    }
+  .diet-compo__list_right {
+    margin-top: 0px;
+  }
 
-    .diet-compo__slider {
-        grid-area: diet-compo__slider;
-        background: url('../img/common/long-vert-wave-forpinkbg.png') 50%/contain no-repeat, #EAD1D0;
-        display: grid;
-    }
+  .diet-compo__slider {
+    grid-area: diet-compo__slider;
+    background: url("../img/common/long-vert-wave-forpinkbg.png") 50% / contain
+        no-repeat,
+      #ead1d0;
+    display: grid;
+  }
 }
 
 /* = ZOOOV DIETS ============================================== */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .diets {
-    grid-area: diets;
-    display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 326px) minmax(auto, 97px) minmax(auto, 777px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". diets__subtitle . diets__text ."
-        ". diets__items diets__items diets__items  .";
+  grid-area: diets;
+  display: grid;
+  grid-template-columns:
+    minmax(24px, 1fr) minmax(auto, 326px) minmax(auto, 97px)
+    minmax(auto, 777px) minmax(24px, 1fr);
+  grid-template-areas:
+    ". diets__subtitle . diets__text ."
+    ". diets__items diets__items diets__items  .";
 }
 
 .diets__subtitle {
-    grid-area: diets__subtitle;
-    display: grid;
-    align-self: center;
+  grid-area: diets__subtitle;
+  display: grid;
+  align-self: center;
 }
 
 .diets__text {
-    grid-area: diets__text;
+  grid-area: diets__text;
 }
 
 .diets__items {
-    grid-area: diets__items;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    column-gap: 26px;
-    row-gap: 50px;
-    margin-top: 72px;
+  grid-area: diets__items;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 26px;
+  row-gap: 50px;
+  margin-top: 72px;
 }
 
 .diets__slider {
-    display: none;
+  display: none;
 }
 
 .diets__item {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template: auto 1fr minmax(40px, auto) / 1fr;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto 1fr minmax(40px, auto) / 1fr;
 }
 
 .diets__image {
-    position: relative;
-    padding: 0px 0px 90% 0px;
-    margin: 0px 0px 47px 0px;
-    grid-auto-rows: 1fr;
+  position: relative;
+  padding: 0px 0px 90% 0px;
+  margin: 0px 0px 47px 0px;
+  grid-auto-rows: 1fr;
 }
 
 .diets__image img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 .diets__button {
-    justify-self: start;
+  justify-self: start;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .diets__for {
-    font-size: 16px;
-    font-weight: 700;
-    padding-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 4px;
 }
 
 .diets__compo,
 .diets_weight {
-    font-size: 13px;
-    color: #9F9E9D;
+  font-size: 13px;
+  color: #9f9e9d;
 }
 
 .diets__compo {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .diets__descrition {
-    font-size: 14px;
-    padding-bottom: 11px;
+  font-size: 14px;
+  padding-bottom: 11px;
 }
 
 .diets__weight {
-    padding-bottom: 24px;
+  padding-bottom: 24px;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 835px) {
-    .diets {
-        grid-area: diets;
-        display: grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 787px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". diets__subtitle ."
-            ". diets__text ."
-            ". diets__items .";
-    }
+  .diets {
+    grid-area: diets;
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 787px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". diets__subtitle ."
+      ". diets__text ."
+      ". diets__items .";
+  }
 
-    .diets__subtitle {
-        padding-bottom: 8px;
-    }
+  .diets__subtitle {
+    padding-bottom: 8px;
+  }
 
-    .diets__text {
-        margin: 16px 0px;
-    }
+  .diets__text {
+    margin: 16px 0px;
+  }
 }
 
 @media screen and (max-width: 577px) {
-    .diets {
-        grid-area: diets;
-        display: grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 529px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". diets__subtitle ."
-            ". diets__text ."
-            "diets__slider diets__slider diets__slider";
-    }
+  .diets {
+    grid-area: diets;
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 529px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". diets__subtitle ."
+      ". diets__text ."
+      "diets__slider diets__slider diets__slider";
+  }
 
-    .diets__items {
-        display: none;
-    }
+  .diets__items {
+    display: none;
+  }
 
-    .diets__slider {
-        display: grid;
-        grid-area: diets__slider;
-        justify-self: center;
-        width: 100%;
-    }
+  .diets__slider {
+    display: grid;
+    grid-area: diets__slider;
+    justify-self: center;
+    width: 100%;
+  }
 
-    .diets__subtitle {
-        padding-bottom: 0px;
-    }
+  .diets__subtitle {
+    padding-bottom: 0px;
+  }
 
-    .diets__text {
-        margin: 16px 0px;
-        font-size: 14px;
-    }
+  .diets__text {
+    margin: 16px 0px;
+    font-size: 14px;
+  }
 
-    .diets__item {
-        transition: all 0.3s ease 0.3s;
-        opacity: 0.2;
-    }
+  .diets__item {
+    transition: all 0.3s ease 0.3s;
+    opacity: 0.2;
+  }
 
-    .diets__item.slick-center {
-        opacity: 1;
-    }
+  .diets__item.slick-center {
+    opacity: 1;
+  }
 }
 
 /* = DIET CALCULATION ========================================= */
-/* - Позиционирование -------------------------------------- */
+/* - Psitioning ----------------------------------------------- */
 .diet-calc {
-    grid-area: diet-calc;
-    display: grid;
-    grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". diet-compo__content .";
+  grid-area: diet-calc;
+  display: grid;
+  grid-template: 1fr / minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
+  grid-template-areas: ". diet-compo__content .";
 }
 
 .diet-calc__content {
-    grid-area: diet-compo__content;
-    display: grid;
-    background: url('../img/common/long-wave-forpinkbg.png') 0px center no-repeat, #EAD1D0;
-    grid-template-columns: 66% 34%;
-    min-height: 184px;
-    grid-template-areas:
-        "diet-calc__text diet-calc__button";
+  grid-area: diet-compo__content;
+  display: grid;
+  background: url("../img/common/long-wave-forpinkbg.png") 0px center no-repeat,
+    #ead1d0;
+  grid-template-columns: 66% 34%;
+  min-height: 184px;
+  grid-template-areas: "diet-calc__text diet-calc__button";
 }
 
 .diet-calc__text {
-    grid-area: diet-calc__text;
-    display: flex;
-    align-self: center;
+  grid-area: diet-calc__text;
+  display: flex;
+  align-self: center;
 }
 
 .diet-calc__button {
-    grid-area: diet-calc__button;
-    display: flex;
-    justify-self: center;
-    align-self: center;
+  grid-area: diet-calc__button;
+  display: flex;
+  justify-self: center;
+  align-self: center;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .diet-calc__text {
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    text-align: left;
-    color: #000000;
-    padding-left: 5%;
-    padding-right: 2.5%;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #000000;
+  padding-left: 5%;
+  padding-right: 2.5%;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1008px) {
-    .diet-calc {
-        grid-area: diet-calc;
-        display: grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 960px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". diet-compo__content .";
-    }
+  .diet-calc {
+    grid-area: diet-calc;
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 960px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas: ". diet-compo__content .";
+  }
 
-    .diet-calc__content {
-        grid-area: diet-compo__content;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "diet-calc__text"
-            "diet-calc__button";
-    }
+  .diet-calc__content {
+    grid-area: diet-compo__content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "diet-calc__text"
+      "diet-calc__button";
+  }
 
-    .diet-calc__text {
-        grid-area: diet-calc__text;
-        padding-left: 32px 24px 24px 24px;
-        text-align: center;
-        font-size: 20px;
-    }
+  .diet-calc__text {
+    grid-area: diet-calc__text;
+    padding-left: 32px 24px 24px 24px;
+    text-align: center;
+    font-size: 20px;
+  }
 
-    .diet-calc__button {
-        grid-area: diet-calc__button;
-        margin-bottom: 32px;
-    }
+  .diet-calc__button {
+    grid-area: diet-calc__button;
+    margin-bottom: 32px;
+  }
 }
 
 /* = WHY ZOOOV ================================================ */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .why-zooov {
-    display: grid;
-    background: url('../img/common/long-wave-forwhitebg.png') 0px center/contain no-repeat;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". why-zooov__subtitle ."
-        ". why-zooov__items .";
+  display: grid;
+  background: url("../img/common/long-wave-forwhitebg.png") 0px center/contain
+    no-repeat;
+  grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(
+      24px,
+      1fr
+    );
+  grid-template-areas:
+    ". why-zooov__subtitle ."
+    ". why-zooov__items .";
 }
 
 .why-zooov__subtitle {
-    grid-area: why-zooov__subtitle;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    display: grid;
-    justify-self: start;
+  grid-area: why-zooov__subtitle;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  display: grid;
+  justify-self: start;
 }
 
 .why-zooov__items {
-    grid-area: why-zooov__items;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    column-gap: 27px;
-    row-gap: 50px;
-    margin-top: 3px;
+  grid-area: why-zooov__items;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 27px;
+  row-gap: 50px;
+  margin-top: 3px;
 }
 
 .why-zooov__item {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template: auto minmax(23px, auto) 1fr / 1fr;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto minmax(23px, auto) 1fr / 1fr;
 }
 
 .why-zooov__image {
-    position: relative;
-    margin-bottom: 22px;
+  position: relative;
+  margin-bottom: 22px;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .why-zooov__minisubtitle {
-    padding-top: 0px;
-    padding-bottom: 8px;
+  padding-top: 0px;
+  padding-bottom: 8px;
 }
 
-
-/* - Медиазапросы ------------------------------------------ */
+/* - Media queries ------------------------------------------ */
 @media screen and (max-width: 851px) {
-    .why-zooov {
-        display: grid;
-        background: url('../img/common/long-wave-forwhitebg.png') 0px 20%/contain no-repeat, url('../img/common/long-wave-forwhitebg.png') 0px 80%/contain no-repeat;
-        margin-bottom: 80px;
-    }
+  .why-zooov {
+    display: grid;
+    background: url("../img/common/long-wave-forwhitebg.png") 0px 20% / contain
+        no-repeat,
+      url("../img/common/long-wave-forwhitebg.png") 0px 80% / contain no-repeat;
+    margin-bottom: 80px;
+  }
 }
 
 /* = ABOUT ZOOOV: FROM ZOOOV WITH CARE AND LOVE =============== */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .about-zooov {
-    display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 556px) minmax(auto, 644px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". about-zooov__gallery about-zooov__description .";
-    background: url('../img/about-us/about-us-waves.png') -20px center no-repeat, #FFF4F3;
-    padding: 80px 0px;
+  display: grid;
+  grid-template-columns:
+    minmax(24px, 1fr) minmax(auto, 556px) minmax(auto, 644px)
+    minmax(24px, 1fr);
+  grid-template-areas: ". about-zooov__gallery about-zooov__description .";
+  background: url("../img/about-us/about-us-waves.png") -20px center no-repeat,
+    #fff4f3;
+  padding: 80px 0px;
 }
 
 .about-zooov__gallery {
-    grid-area: about-zooov__gallery;
-    display: grid;
-    grid-template-columns: minmax(auto, 194px) minmax(auto, 281px) minmax(auto, 81px);
+  grid-area: about-zooov__gallery;
+  display: grid;
+  grid-template-columns: minmax(auto, 194px) minmax(auto, 281px) minmax(
+      auto,
+      81px
+    );
 }
 
 .gallery__big {
-    grid-area: 1 / 1 / 3 / 3;
-    position: relative;
+  grid-area: 1 / 1 / 3 / 3;
+  position: relative;
 }
 
 .gallery__big img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
 }
 
 .gallery__small {
-    grid-area: 2 / 2 / 4 / 4;
-    position: relative;
+  grid-area: 2 / 2 / 4 / 4;
+  position: relative;
 }
 
 .gallery__small img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: 0;
-    right: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  right: 0;
 }
 
 .gallery__dog {
-    grid-area: 3 / 1 / 3 / 1;
-    position: relative;
-    max-width: 183px;
-    z-index: 2;
-    left: -50px;
+  grid-area: 3 / 1 / 3 / 1;
+  position: relative;
+  max-width: 183px;
+  z-index: 2;
+  left: -50px;
 }
 
 .gallery__dog img {
-    position: absolute;
-    width: 100%;
-    height: auto;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
 .gallery__heart {
-    grid-area: 2 / 3 / 2 / 3;
-    position: relative;
-    max-width: 120px;
-    top: 25px;
-    left: -50px;
-    z-index: 2;
+  grid-area: 2 / 3 / 2 / 3;
+  position: relative;
+  max-width: 120px;
+  top: 25px;
+  left: -50px;
+  z-index: 2;
 }
 
 .gallery__heart img {
-    position: absolute;
-    width: 100%;
-    height: auto;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
 .about-zooov__description {
-    grid-area: about-zooov__description;
-    margin-left: 9%;
-    margin-right: 10%;
+  grid-area: about-zooov__description;
+  margin-left: 9%;
+  margin-right: 10%;
 }
 
 .about-zooov__subtitle {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    line-height: 130%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 130%;
 }
 
 .about-zooov__gallery_mobile {
-    display:none;
+  display: none;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - typography ------------------------------------------- */
 .about-zooov__text {
-    line-height: 130%;
+  line-height: 130%;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1229px) {
-    .about-zooov__gallery {
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
+  .about-zooov__gallery {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 }
 
 @media screen and (max-width: 1199px) {
-.gallery__heart {
+  .gallery__heart {
     top: 65px;
-    }
+  }
 }
 
 @media screen and (max-width: 1165px) {
-    .about-zooov__gallery {
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
+  .about-zooov__gallery {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 
-    .gallery__dog {
-        top: -60px;
-    }
+  .gallery__dog {
+    top: -60px;
+  }
 
-    .gallery__heart {
-        top: 80px;
-    }
+  .gallery__heart {
+    top: 80px;
+  }
 }
 
 @media screen and (max-width: 1135px) {
-    .about-zooov__gallery {
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
+  .about-zooov__gallery {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 
-    .gallery__heart {
-        top: 90px;
-    }
+  .gallery__heart {
+    top: 90px;
+  }
 }
 
 @media screen and (max-width: 1096px) {
-    .about-zooov__gallery {
-        padding-top: 15%;
-        padding-bottom: 15%;
-    }
+  .about-zooov__gallery {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
 }
 
 @media screen and (max-width: 1075px) {
-    .about-zooov__gallery {
-        padding-top: 20%;
-        padding-bottom: 20%;
-    }
+  .about-zooov__gallery {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
 }
 
 @media screen and (max-width: 1040px) {
-    .about-zooov__gallery {
-        padding-top: 25%;
-        padding-bottom: 25%;
-    }
+  .about-zooov__gallery {
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
 
-    .gallery__dog {
-        padding-left: 10px;
-    }
+  .gallery__dog {
+    padding-left: 10px;
+  }
 }
 
 @media screen and (max-width: 1005px) {
-    .about-zooov {
-        display:grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 957px) minmax(24px, 1fr);
-        grid-template-areas:
-        ". about-zooov__description ."
-        "about-zooov__gallery_mobile about-zooov__gallery_mobile about-zooov__gallery_mobile";
-        background: url('../img/about-us/about-us-waves-mobile.png') right 105%/auto auto no-repeat, #FFF4F3;
-        padding: 0px;
-    }
+  .about-zooov {
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 957px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". about-zooov__description ."
+      "about-zooov__gallery_mobile about-zooov__gallery_mobile about-zooov__gallery_mobile";
+    background: url("../img/about-us/about-us-waves-mobile.png") right 105% /
+        auto auto no-repeat,
+      #fff4f3;
+    padding: 0px;
+  }
 
-    .about-zooov__description {
-        grid-area: about-zooov__description;
-        margin: 0px;
-    }
+  .about-zooov__description {
+    grid-area: about-zooov__description;
+    margin: 0px;
+  }
 
-    .about-zooov__subtitle {
-        margin-bottom: 24px;
-    }
+  .about-zooov__subtitle {
+    margin-bottom: 24px;
+  }
 
-    .about-zooov__gallery_mobile {
-        grid-area: about-zooov__gallery_mobile;
-        display: grid;
-        padding: 0px 0px 53px 0px;
-    }
+  .about-zooov__gallery_mobile {
+    grid-area: about-zooov__gallery_mobile;
+    display: grid;
+    padding: 0px 0px 53px 0px;
+  }
 
-    .about-zooov__gallery_mobile img {
-        width:100%;
-    }
+  .about-zooov__gallery_mobile img {
+    width: 100%;
+  }
 
-    .about-zooov__gallery {
-        display:none;
-    }
+  .about-zooov__gallery {
+    display: none;
+  }
 }
 
 /* = DELIVERY: HOW TO GET ZOOOV? ============================== */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .delivery {
-    grid-area: delivery;
-    display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". delivery__subtitle ."
-        ". delivery__items .";
+  grid-area: delivery;
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) minmax(auto, 1200px) minmax(
+      24px,
+      1fr
+    );
+  grid-template-areas:
+    ". delivery__subtitle ."
+    ". delivery__items .";
 }
 
 .delivery__subtitle {
-    grid-area: delivery__subtitle;
-    display: grid;
-    justify-self: start;
+  grid-area: delivery__subtitle;
+  display: grid;
+  justify-self: start;
 }
 
 .delivery__items {
-    grid-area: delivery__items;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    column-gap: 27px;
-    row-gap: 50px;
-    margin-top: 2px;
+  grid-area: delivery__items;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 27px;
+  row-gap: 50px;
+  margin-top: 2px;
 }
 
 .delivery__item {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template: auto minmax(23px, auto) 1fr / 1fr;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto minmax(23px, auto) 1fr / 1fr;
 }
 
 .delivery__image {
-    position: relative;
-    margin-bottom: 22px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: start;
+  position: relative;
+  margin-bottom: 22px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .delivery__arrow {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .image-heart {
-    padding-top: 4px;
-    padding-bottom: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .delivery__subtitle {
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .delivery__minisubtitle {
-    padding-top: 0px;
-    padding-bottom: 8px;
+  padding-top: 0px;
+  padding-bottom: 8px;
 }
 
 .delivery__cue {
-    color: #8B1A12;
-    text-decoration: none;
+  color: #8b1a12;
+  text-decoration: none;
 }
 
-/* - Медиазапросы ------------------------------------------ */
-@media screen and (max-width: 574px ) {
-    .delivery__arrow {
-        display: none;
-    }
+/* - Media Queries ------------------------------------------ */
+@media screen and (max-width: 574px) {
+  .delivery__arrow {
+    display: none;
+  }
 
-    .delivery__items {
-        background: url('../img/delivery/deliveryarrow-mobile.png') 0 63px/auto 90% no-repeat;
-        padding-left: 24px;
-    }
+  .delivery__items {
+    background: url("../img/delivery/deliveryarrow-mobile.png") 0 63px / auto
+      90% no-repeat;
+    padding-left: 24px;
+  }
 
-    .delivery__subtitle {
-        padding-bottom: 40px;
-    }
+  .delivery__subtitle {
+    padding-bottom: 40px;
+  }
 }
 
 /* = FAQ ====================================================== */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .faq {
-    grid-area: faq;
-    display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 348px) minmax(auto, 76px) minmax(auto, 776px) minmax(1rem, 1fr);
-    grid-template-areas:
-        ". faq__subtitle . faq__spoiler .";
+  grid-area: faq;
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 1fr) minmax(auto, 348px) minmax(auto, 76px)
+    minmax(auto, 776px) minmax(1rem, 1fr);
+  grid-template-areas: ". faq__subtitle . faq__spoiler .";
 }
 
 .faq__subtitle {
-    grid-area: faq__subtitle;
+  grid-area: faq__subtitle;
 }
 
 .faq__spoiler {
-    grid-area: faq__spoiler;
+  grid-area: faq__spoiler;
 }
 
 .spoiler__minisubtitle {
-    position: relative;
+  position: relative;
 }
 
 .spoiler__minisubtitle::before,
 .spoiler__minisubtitle::after {
-    content: '';
-    width: 20px;
-    height: 2px;
-    background-color: #8B1A12;
-    position: absolute;
-    right: 10px;
-    top: 40px;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: #8b1a12;
+  position: absolute;
+  right: 10px;
+  top: 40px;
 }
 
 .spoiler__minisubtitle:before {
-    transform: rotate(90deg);
-    transition: all 0.3s ease 0s;
+  transform: rotate(90deg);
+  transition: all 0.3s ease 0s;
 }
 
 .spoiler__minisubtitle.active:before {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .spoiler__text {
-    margin: 0px;
-    display: none;
+  margin: 0px;
+  display: none;
 }
 
 .spoiler__item:not(:last-of-type) {
-    border-bottom: solid 1px #E5E5E5;
-    padding-bottom: 24px;
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 24px;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .spoiler__minisubtitle {
-    line-height: 140%;
-    padding: 24px 44px 0px 0px;
-    cursor: pointer;
+  line-height: 140%;
+  padding: 24px 44px 0px 0px;
+  cursor: pointer;
 }
 
 .spoiler__text {
-    padding: 12px 44px 0px 0px;
+  padding: 12px 44px 0px 0px;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 835px) {
-    .faq {
-        grid-area: faq;
-        display: grid;
-        margin-bottom: 80px;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 787px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". faq__subtitle ."
-            ". faq__spoiler .";
-    }
+  .faq {
+    grid-area: faq;
+    display: grid;
+    margin-bottom: 80px;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 787px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". faq__subtitle ."
+      ". faq__spoiler .";
+  }
 
-    .faq__subtitle {
-        padding-bottom: 8px;
-    }
+  .faq__subtitle {
+    padding-bottom: 8px;
+  }
 }
 
 /* = CONTACTS ================================================= */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .contacts {
-    grid-area: contacts;
-    display: grid;
-    grid-template-columns: minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px) minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
-    grid-template-areas:
-        ". contacts__how-to contacts__dog-meat contacts__form contacts__apple .";
-    background: url(../img/contacts/contacts-wave-left.png) 0 100% no-repeat, url(../img/contacts/contacts-wave-right.png) 103% -63px no-repeat, url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat, #961914;
+  grid-area: contacts;
+  display: grid;
+  grid-template-columns:
+    minmax(24px, 1fr) minmax(auto, 302px) minmax(auto, 187px)
+    minmax(auto, 636px) minmax(auto, 75px) minmax(24px, 1fr);
+  grid-template-areas: ". contacts__how-to contacts__dog-meat contacts__form contacts__apple .";
+  background: url(../img/contacts/contacts-wave-left.png) 0 100% no-repeat,
+    url(../img/contacts/contacts-wave-right.png) 103% -63px no-repeat,
+    url(../img/contacts/contacts-apple.png) 100% 98%/104px no-repeat, #961914;
 }
 
 .contacts__how-to {
-    grid-area: contacts__how-to;
+  grid-area: contacts__how-to;
 }
 
 .contacts__button {
-    display: block;
-    max-width: 274px;
+  display: block;
+  max-width: 274px;
 }
 
 .contacts__logo {
-    padding-right: 8px;
-    width: 24px;
+  padding-right: 8px;
+  width: 24px;
 }
 
 .contacts__dog-meat {
-    grid-area: contacts__dog-meat;
+  grid-area: contacts__dog-meat;
 }
 
 .dog-icon {
-    max-width: 110px;
-    position: relative;
-    margin-top: 80px;
-    margin-left: 40px;
+  max-width: 110px;
+  position: relative;
+  margin-top: 80px;
+  margin-left: 40px;
 }
 
 .meat-icon {
-    max-width: 134px;
-    position: relative;
-    margin-top: 30px;
+  max-width: 134px;
+  position: relative;
+  margin-top: 30px;
 }
 
 .dog-icon img {
-    width:100%;
+  width: 100%;
 }
 
 .meat-icon img {
-    width: 100%;
+  width: 100%;
 }
 
 .contacts__form {
-    grid-area: contacts__form;
+  grid-area: contacts__form;
 }
 
 .contacts__subtitle {
-    margin-top: 80px;
+  margin-top: 80px;
 }
 
 .contacts__text {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .contacts__phone {
-    margin-top: 32px;
-    margin-bottom: 24px;
+  margin-top: 32px;
+  margin-bottom: 24px;
 }
 
 .contacts__insta {
-    margin-top: 40px;
-    margin-bottom: 80px;
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .contacts__form__inputs {
-    margin-top: 34px;
-    margin-bottom: 76px;
+  margin-top: 34px;
+  margin-bottom: 76px;
 }
 
 .contacts__minisubtitle {
-    line-height: 140%;
-    margin-top: 110px;
-    margin-bottom: 4px;
+  line-height: 140%;
+  margin-top: 110px;
+  margin-bottom: 4px;
 }
 
 .inputs__name-mail {
-    display: flex;
-    margin-bottom: 16px;
-    justify-content: space-between;
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .inputs__question {
-    display: flex;
-    margin-bottom: 22px;
+  display: flex;
+  margin-bottom: 22px;
 }
 
 .contact-form__privacy {
-    max-width: 260px;
-    display: inline-flex;
+  max-width: 260px;
+  display: inline-flex;
 }
 
 .contact-form__privacy p {
-    padding-left: 8px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  padding-left: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .contact-form__privacy-button {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .button_color-pink {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .inputs__name,
 .inputs__mail,
 .inputs__question textarea,
 .contact-form__privacy input {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
 }
 
 .inputs__name {
-    margin-right: 12px;
-    width: 100%;
+  margin-right: 12px;
+  width: 100%;
 }
 
 .inputs__mail {
-    margin-left: 12px;
-    width: 100%;
+  margin-left: 12px;
+  width: 100%;
 }
 
 .inputs__question textarea {
-    width: 100%;
-    min-height: 122px;
+  width: 100%;
+  min-height: 122px;
 }
 
-/* - Типографика ------------------------------------------- */
-.contacts__phone a{
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 140%;
-    color: #FFFFFF;
-    text-decoration: none;
+/* - Typography ------------------------------------------- */
+.contacts__phone a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.contacts__insta a{
-    color: #FFFFFF;
+.contacts__insta a {
+  color: #ffffff;
 }
 
 .contact-form__privacy {
-    font-size: 12px;
-    line-height: 140%;
+  font-size: 12px;
+  line-height: 140%;
 }
 
 .inputs__name,
 .inputs__mail,
 .inputs__question textarea {
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(255, 255, 255, 1);
-    opacity: 60%;
-    align-content: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+  opacity: 60%;
+  align-content: center;
 }
 
 .inputs__name,
 .inputs__mail,
 .inputs__question textarea {
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 13px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 13px;
 }
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 
 @media screen and (max-width: 1023px) {
-    .contacts {
-        grid-area: contacts;
-        display: grid;
-        grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(24px, 1fr);
-        grid-template-areas:
-            ". contacts__how-to ."
-            ". contacts__form .";
-        background: url(../img/contacts/contacts-mobile-wave-top.png) 100% -129px no-repeat, url(../img/contacts/contacts-mobile-wave-bottom.png) 100% 110% no-repeat, url(../img/contacts/contacts-dog.png) 100% 12%/110px no-repeat, url(../img/contacts/contacts-meat.png) 100% 40%/134px no-repeat, url(../img/contacts/contacts-apple.png) 15% 95%/104px no-repeat,#961914;
-    }
+  .contacts {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: minmax(24px, 1fr) minmax(auto, 975px) minmax(
+        24px,
+        1fr
+      );
+    grid-template-areas:
+      ". contacts__how-to ."
+      ". contacts__form .";
+    background: url(../img/contacts/contacts-mobile-wave-top.png) 100% -129px no-repeat,
+      url(../img/contacts/contacts-mobile-wave-bottom.png) 100% 110% no-repeat,
+      url(../img/contacts/contacts-dog.png) 100% 12%/110px no-repeat,
+      url(../img/contacts/contacts-meat.png) 100% 40%/134px no-repeat,
+      url(../img/contacts/contacts-apple.png) 15% 95%/104px no-repeat, #961914;
+  }
 
-    .contacts__dog-meat{
-        display: none;
-    }
+  .contacts__dog-meat {
+    display: none;
+  }
 
-    .contacts__form .text{
-        margin-right: 134px;
-    }
+  .contacts__form .text {
+    margin-right: 134px;
+  }
 
-    .contacts__subtitle, .contacts__minisubtitle {
-        margin-top: 56px;
-    }
+  .contacts__subtitle,
+  .contacts__minisubtitle {
+    margin-top: 56px;
+  }
 
-    .contacts__subtitle {
-        font-size: 40px;
-    }
+  .contacts__subtitle {
+    font-size: 40px;
+  }
 
-    .contacts__insta {
-        margin-bottom: 0px;
-    }
+  .contacts__insta {
+    margin-bottom: 0px;
+  }
 
-    .inputs__name-mail, .contact-form__privacy-button  {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0px;
-    }
+  .inputs__name-mail,
+  .contact-form__privacy-button {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
 
-    .inputs__name, .inputs__mail {
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-right: 0px;
-        padding-left: 0px;
-    }
+  .inputs__name,
+  .inputs__mail {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 
-    .inputs__name, .inputs__mail, .inputs__question {
-        margin-bottom: 16px;
-    }
+  .inputs__name,
+  .inputs__mail,
+  .inputs__question {
+    margin-bottom: 16px;
+  }
 
-    .contact-form__privacy {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 33px;
-    }
+  .contact-form__privacy {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 33px;
+  }
 
-    .contact-form__privacy-button {
-        margin-bottom: 242px;
-    }
+  .contact-form__privacy-button {
+    margin-bottom: 242px;
+  }
 }
 
 /* = FOOTER =================================================== */
-/* - Позиционирование -------------------------------------- */
+/* - Positioning ---------------------------------------------- */
 .footer {
-    grid-area: footer;
-    width: 100%;
-    background-color: #69120E;
-    display: grid;
-    grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(1rem, 1fr);
-    grid-template-areas:
-        ". footer__content .";
+  grid-area: footer;
+  width: 100%;
+  background-color: #69120e;
+  display: grid;
+  grid-template-columns: minmax(1rem, 1fr) minmax(auto, 1200px) minmax(
+      1rem,
+      1fr
+    );
+  grid-template-areas: ". footer__content .";
 }
 
 .footer__content {
-    grid-area: footer__content;
-    display: flex;
-    justify-content: space-between;
+  grid-area: footer__content;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* - Типографика ------------------------------------------- */
+/* - Typography ------------------------------------------- */
 .text-footer,
 .text-footer a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 17px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.4);
-    text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
 }
 
 .footer__content div {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .footer__content div:not(:last-of-type) {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
-/* - Медиазапросы ------------------------------------------ */
+/* - Media Queries ------------------------------------------ */
 @media screen and (max-width: 1023px) {
-    .footer__content {
-        grid-area: footer__content;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-    }
+  .footer__content {
+    grid-area: footer__content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
 
-    .footer__content div {
-        padding: 8px 0px 0px 0px;
-    }
+  .footer__content div {
+    padding: 8px 0px 0px 0px;
+  }
 
-    .footer__content div:not(:last-of-type) {
-        padding: 24px 0px 0px 0px;
-    }
+  .footer__content div:not(:last-of-type) {
+    padding: 24px 0px 0px 0px;
+  }
 }
