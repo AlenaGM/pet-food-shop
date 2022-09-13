@@ -6,7 +6,7 @@ The project was made on 9th & 10th weeks of code learning.
 
 ## Result
 <br>
-<img width="45%" alt="screen capture" src="../main/assets/images/capturefirstpage.jpeg">
+<img width="45%" alt="screen capture" src="../main/assets/img/capturefirstpage.jpg">
 
 ## Demo
 [Zooov]
