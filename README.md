@@ -2,7 +2,7 @@
 
 Online pet food shop. Personal project aimed to perfect my skills in building adaptive CSS-Grid layouts. 
 
-The project was made on 9th&10th weeks of code learning.
+The project was made on 9-10th weeks of code learning.
 
 ## Tech stack
 
