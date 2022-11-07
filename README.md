@@ -1,6 +1,6 @@
 # Zooov
 
-Landing for online pet food shop. Personal project aimed to perfect my skills in building adaptive CSS-Grid layouts. 
+Landing page for online pet food shop. Personal project aimed to perfect my skills in building adaptive CSS-Grid layouts. 
 
 The project was made on 9-10th weeks of code learning.
 
