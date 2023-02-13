@@ -1,4 +1,4 @@
-# Zooov
+# Online Pet Food Shop
 
 Landing page for online pet food shop. Personal project aimed to perfect my skills in building adaptive CSS-Grid layouts. 
 
