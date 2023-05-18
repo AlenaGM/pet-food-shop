@@ -23,4 +23,4 @@ The task was to build a simple landing page using Grid-Layout.
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [Pet Food Shop]: <https://alenagm.github.io/Zooov/>
+   [Pet Food Shop]: <https://alenagm.github.io/pet-food-shop/>
