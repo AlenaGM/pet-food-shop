@@ -74,6 +74,7 @@ body {
   letter-spacing: 0em;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button_color-red {
