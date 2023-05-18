@@ -1,8 +1,8 @@
 # Online Pet Food Shop
 
-Landing page for online pet food shop. Personal project aimed to perfect my skills in building adaptive CSS-Grid layouts. 
+Landing page for online pet food shop, a training project built on week 7 of learning with [ITGirlSchool].
 
-The project was made on 9-10th weeks of code learning.
+The task was to build a simple landing page using Grid-Layout.
 
 ## Tech stack
 
@@ -12,15 +12,15 @@ The project was made on 9-10th weeks of code learning.
 &nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Adaptive Layout<br>
 
 ## Demo
-[Zooov]
+[Pet Food Shop]
 
 ## Result
 
 <img width="45%" alt="screen capture" src="../main/assets/img/captureweb.jpeg">
 
 <br><br> 
-\* _Weeks 9 and 10 Training Project in [ITGirlSchool]_ 
+\* _Week 7 Training Project in [ITGirlSchool]_ 
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [Zooov]: <https://alenagm.github.io/Zooov/>
+   [Pet Food Shop]: <https://alenagm.github.io/pet-food-shop/>
