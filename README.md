@@ -1,6 +1,6 @@
 # Online Pet Food Shop
 
-Landing page for an online pet food shop, a training project built during week 9 of learning with [ITGirlSchool]. 
+Landing page for an online pet food shop, a training project built during week 9 of learning at [ITGirlSchool]. 
 
 The task was to create a basic landing page using CSS-Grid.
 
